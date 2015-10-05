@@ -26,6 +26,7 @@ public class Polynom {
      * sie mich ja nicht....
      */
 
+	double[] array;
     /**
      * Erzeugt ein neues Polynom mit den gegebenen Koeffizienten.
      * Die Koeffizienten beginnen Element a0 und setzen sich dann zu
@@ -36,6 +37,11 @@ public class Polynom {
      * @param a Koeffizienten des Polynoms
      */
     public Polynom(double... a) {
+    	
+    	
+    	array = new double[a.length];
+    	array = a;
+    	
     }
 
     /**
@@ -43,6 +49,10 @@ public class Polynom {
      * 0 sind.
      */
     public Polynom() {
+    	
+    	array = new double[0];
+    	return;
+
     }
 
     /**
@@ -52,6 +62,16 @@ public class Polynom {
      * @return Wert an der Stelle x
      */
     public double berechne(double x) {
+    	
+    	int xstelle; 
+    	for(int i=0;i<array.length;i++){
+    		
+    		
+    	}
+    	
+    	
+
+    	
         return 0.0;
     }
 
@@ -62,6 +82,8 @@ public class Polynom {
      * @return Ergebnis
      */
     public double[] calc(double[] xs) {
+    	
+    	
         return null;
     }
 
@@ -71,8 +93,20 @@ public class Polynom {
      * @return Grad des Polynoms, -1 für das Nullpolynom
      */
     public int getGrad() {
-        return -1;    }
-
+    	
+    	int stelle=-1;
+    	if(array.length == 0){
+    	} else{
+    		for (int i=0;i<array.length;i++){
+        		if(array[i] != 0){
+        			stelle = i;
+        	}	
+        	
+    		}
+    	
+         }
+    	return stelle;
+    }
     /**
      * Liefert den n-ten Koeffizienten.
      *
@@ -81,15 +115,20 @@ public class Polynom {
      *         Polynoms ist
      */
     public double getKoeffizient(int n) {
-        return 0;
+    	
+    	double ergebnis = array[n];
+        return ergebnis;
     }
-
+    
+ 
     /**
      * Liefert die Koeffizienten dieses Polynoms.
      *
      * @return die Koeffizienten.
      */
     public double[] getKoeffizienten() {
+    	
+
         return null;
     }
 
@@ -100,6 +139,10 @@ public class Polynom {
      * @return neues Polynom mit dem Ergebnis der Addition
      */
     public Polynom addiere(Polynom p) {
+    	int p1 = polynom p;
+    	
+    	
+    	
         return null;
     }
 
@@ -110,6 +153,9 @@ public class Polynom {
      * @return neues Polynom mit dem Ergebnis der Subtraktion
      */
     public Polynom subtrahiere(Polynom p) {
+    	
+    	
+    	
         return null;
     }
 
@@ -119,6 +165,10 @@ public class Polynom {
      * @return Ergebnis der Ableitung
      */
     public Polynom differenziere() {
+    	
+    	
+    	
+    	
         return null;
     }
 
@@ -128,6 +178,10 @@ public class Polynom {
      * @return Ergebnis der Integration.
      */
     public Polynom integriere() {
+    	
+    	
+    	
+    	
         return null;
     }
 
