@@ -3,11 +3,13 @@ package FlaecheAuslesen;
 public class Rechteck extends Figur {
 	
 	//Attribute
-	int höhe = 5;
-	int breite = 10;
+	double hoehe;
+	double breite;
 
 	//Constructor 
-	public Rechteck (int höhe, int breite){
-		super();	
+	public Rechteck (double hoehe, double breite){
+		super(hoehe* breite);
 	}	
+	
+	
 }

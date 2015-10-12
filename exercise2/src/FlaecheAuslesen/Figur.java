@@ -3,18 +3,21 @@ package FlaecheAuslesen;
 public class Figur {
 
 	//Attribute
-	private int flaeche = 0;
+	private double flaeche;
 	
 	//Constructor
 	public Figur () {
-		
-	}
+		this.flaeche = 0.0;
+		}
 	
+	//Constructor2
+	public Figur (double flaeche) {
+		this.flaeche = flaeche;
+		}
 	
-	//Get Methode
-	public int getFlaeche() {
+	//Get Method
+	public double getFlaeche() {
 		return flaeche;
-	
 	}	
 }
 	
