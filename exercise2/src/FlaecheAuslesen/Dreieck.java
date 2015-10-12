@@ -1,5 +1,6 @@
 package FlaecheAuslesen;
 
+
 public class Dreieck extends Figur {
 	
 	//Attribute

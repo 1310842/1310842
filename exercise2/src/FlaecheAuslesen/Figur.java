@@ -1,5 +1,6 @@
 package FlaecheAuslesen;
 
+
 public class Figur {
 
 	//Attribute
