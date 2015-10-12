@@ -1,6 +1,5 @@
 package FlaecheAuslesen;
 
-
 public class Quadrat extends Rechteck {
 
 	//Attribute

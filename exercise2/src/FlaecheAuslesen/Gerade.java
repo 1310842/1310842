@@ -1,6 +1,5 @@
 package FlaecheAuslesen;
 
-
 public class Gerade extends Figur {
 
 	//Attribute
