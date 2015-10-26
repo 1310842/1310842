@@ -43,6 +43,7 @@ public class Polynom {
     	array = a;
     	
     }
+    
 
     /**
      * Erzeugt das Nullpolynom, d.h. das Polynom, bei dem alle Koeffizienten
@@ -129,7 +130,7 @@ public class Polynom {
     public double[] getKoeffizienten() {
     	
 
-        return null;
+        return array;
     }
 
     /**
@@ -139,7 +140,7 @@ public class Polynom {
      * @return neues Polynom mit dem Ergebnis der Addition
      */
     public Polynom addiere(Polynom p) {
-    	int p1 = polynom p;
+    	
     	
     	
     	
