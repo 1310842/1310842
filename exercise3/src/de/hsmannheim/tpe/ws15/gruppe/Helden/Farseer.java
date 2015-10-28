@@ -3,26 +3,30 @@ package de.hsmannheim.tpe.ws15.gruppe.Helden;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Orks;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Rassen;
 
-public class Farseer extends Orks{
+public class Farseer extends Orks {
 
-	/** Attribute
+	/**
+	 * Attribute
 	 */
 	public double bonus = 1.2;
-	
-	/** Constructor
+
+	/**
+	 * Constructor
 	 */
-	public Farseer () {
+	public Farseer() {
 		super();
 		super.setPreis(300);
 	}
-	
-	/** Method attack and decrease life of entity
+
+	/**
+	 * Method attack and decrease life of entity
 	 */
-	public double attack (Rassen wesen) {
-		double damage = wesen.getGeschwindigkeit()*wesen.getSchaden()*this.bonus;
-		double leben = wesen.getLeben() - damage;
+	public double attack(Rassen wesen) {
+		double damage = wesen.getGeschwindigkeit() * wesen.getSchaden()
+				* this.bonus;
+		double leben = wesen.getLeben() - (super.getRuestung() * damage);
 		wesen.setLeben(leben);
 		return damage;
 	}
-	
+
 }

@@ -4,23 +4,27 @@ import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Rassen;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Untote;
 
 public class Lich extends Untote {
-	
-	/** Attribute
+
+	/**
+	 * Attribute
 	 */
 	public double bonus = 2.3;
-	
-	/** Constructor
+
+	/**
+	 * Constructor
 	 */
-	public Lich () {
+	public Lich() {
 		super();
 		super.setPreis(140);
 	}
-	
-	/** Method attack and decrease life of entity
+
+	/**
+	 * Method attack and decrease life of entity
 	 */
-	public double attack (Rassen wesen) {
-		double damage = wesen.getGeschwindigkeit()*wesen.getSchaden()*this.bonus;
-		double leben = wesen.getLeben() - damage;
+	public double attack(Rassen wesen) {
+		double damage = wesen.getGeschwindigkeit() * wesen.getSchaden()
+				* this.bonus;
+		double leben = wesen.getLeben() - (super.getRuestung() * damage);
 		wesen.setLeben(leben);
 		return damage;
 	}
