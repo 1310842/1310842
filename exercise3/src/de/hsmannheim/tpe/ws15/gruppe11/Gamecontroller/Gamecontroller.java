@@ -7,7 +7,7 @@ public class Gamecontroller {
 	
 	/** Attribute
 	 */
-	protected int runde;
+	protected int runde;  
 	protected int spieler1;
 	protected int spieler2;
 	
