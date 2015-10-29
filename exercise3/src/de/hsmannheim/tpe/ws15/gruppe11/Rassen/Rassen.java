@@ -32,9 +32,15 @@ public class Rassen {
 	 * Method attack and decrease life of entity
 	 */
 	public double attack(Rassen wesen) {
-		double damage = this.geschwindigkeit * this.schaden;
-		double leben = wesen.getLeben() - (this.ruestung * damage);
+		double damage = 0;
+		if(this.isLebendig()){
+
+		damage = this.geschwindigkeit * this.schaden;
+		damage = damage - ((wesen.ruestung * damage)/100);
+		double leben = wesen.getLeben() - damage;
 		wesen.setLeben(leben);
+		}
+		
 		return damage;
 	}
 
@@ -48,16 +54,10 @@ public class Rassen {
 		return false;
 	}
 
-	/**
-	 * Method Get to offer life
-	 */
-	public double getLeben() {
-		return this.leben;
-	}
 
-	/**
-	 * Method Set to change status life
-	 */
+
+
+
 	public void setLeben(double leben) {
 		this.leben = leben;
 	}
@@ -122,10 +122,19 @@ public class Rassen {
 	 * Method toString
 	 */
 	@Override
-	public String toString() {
-		return "Rassen [leben =" + leben + ", ruestung = " + ruestung
-				+ ", schaden =" + schaden + ", geschwindigkeit ="
-				+ geschwindigkeit + ", kosten = " + "]";
-	}
+    public String toString() {
+        return (this.getClass().getSimpleName() + ": " + this.getLeben()
+                + " Lebenspunkte, " + this.getGeschwindigkeit()
+                + " Geschwindigkeit, " + this.getSchaden() + " Schaden, "
+                + this.getRuestung() + "Rüstung");
+    }
 
+	 /**
+     * 
+     * @return
+     */
+    public double getLeben() {
+    	return this.leben;
+
+    }
 }

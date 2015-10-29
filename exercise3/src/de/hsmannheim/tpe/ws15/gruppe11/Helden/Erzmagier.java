@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.gruppe.Helden;
+package de.hsmannheim.tpe.ws15.gruppe11.Helden;
 
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Mensch;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Rassen;

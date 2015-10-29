@@ -1,21 +1,21 @@
-package de.hsmannheim.tpe.ws15.gruppe.Helden;
+package de.hsmannheim.tpe.ws15.gruppe11.Helden;
 
-import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Nachtelf;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Rassen;
+import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Untote;
 
-public class Daemonenjaeger extends Nachtelf {
+public class Lich extends Untote {
 
 	/**
 	 * Attribute
 	 */
-	public double bonus = 3.0;
+	public double bonus = 2.3;
 
 	/**
 	 * Constructor
 	 */
-	public Daemonenjaeger() {
+	public Lich() {
 		super();
-		super.setPreis(290);
+		super.setPreis(140);
 	}
 
 	/**
