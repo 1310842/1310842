@@ -3,7 +3,7 @@ package de.hsmannheim.tpe.ws15.gruppe11.Rassen;
 public class Rassen {
 
 	/**
-	 * Attribute
+	 * Attribute die alle Wesen besitzen
 	 */
 	private double leben;
 	private double schaden;
@@ -12,7 +12,7 @@ public class Rassen {
 	private double preis;
 
 	/**
-	 * Constructor
+	 * Konstruktor
 	 * 
 	 * @param leben
 	 * @param schaden
@@ -29,7 +29,7 @@ public class Rassen {
 	}
 
 	/**
-	 * Method attack and decrease life of entity
+	 * Methode zur Schadensberechnung
 	 */
 	public double attack(Rassen wesen) {
 		double damage = 0;
@@ -45,7 +45,7 @@ public class Rassen {
 	}
 
 	/**
-	 * Method isLebendig
+	 * Method die die Lebendigkeit überprüft
 	 */
 	public boolean isLebendig() {
 		if (this.leben > 0) {
@@ -54,72 +54,86 @@ public class Rassen {
 		return false;
 	}
 
-
-
-
-
+	/**
+	 * Die Setmethode setzt die aktuellen Lebenspunkte
+	 * @param leben
+	 */
 	public void setLeben(double leben) {
 		this.leben = leben;
 	}
 
 	/**
-	 * Method Get to offer damage
+	 * Getmethode die den Schaden freigibt
+	 * 
 	 */
 	public double getSchaden() {
 		return this.schaden;
 	}
 
 	/**
-	 * Method Set to change status damage
+	 * Die Setmethode setzt den aktuellen Schaden.
+	 * @param schaden
 	 */
 	public void setSchaden(double schaden) {
 		this.schaden = schaden;
 	}
 
 	/**
-	 * Method Get to offer velocity
+	 * Die Getmethode gibt die aktuelle Geschwindigkeit frei.
 	 */
 	public double getGeschwindigkeit() {
 		return this.geschwindigkeit;
 	}
 
 	/**
-	 * Method Set to change velocity
+	 * Die Setmethode setzt die aktuelle Geschwindigkeit.
+	 * @param geschwindigkeit
 	 */
 	public void setGeschwindigkeit(double geschwindigkeit) {
 		this.geschwindigkeit = geschwindigkeit;
 	}
 
 	/**
-	 * Method Get to offer armor
+	 * Die Getmethode gibt die aktuelle Rüstung frei.
 	 */
 	public double getRuestung() {
 		return this.ruestung;
 	}
 
 	/**
-	 * Method Set to change status armor
+	 * Die Setmethode setzt die aktuelle Ruestung.
+	 * @param ruestung
 	 */
 	public void setRuestung(double ruestung) {
 		this.ruestung = ruestung;
 	}
 
 	/**
-	 * Method Get to offer price
+	 * Die Getmethode gibt den aktuellen Preis frei.
 	 */
 	public double getPreis() {
 		return this.preis;
 	}
 
 	/**
-	 * Method Set to change status price
+	 * Die Setmethode setzt den aktuellen Preis.
+	 * @param preis
 	 */
 	public void setPreis(double preis) {
 		this.preis = preis;
 	}
 
-	/**
-	 * Method toString
+
+	 /**
+     * Die Getmethode die das Attribute leben freigibt.
+     */
+    public double getLeben() {
+    	return this.leben;
+
+    }
+    
+    /**
+	 * Die Methode toString überschreibt die vorhandenen Attribute.
 	 */
 	@Override
     public String toString() {
@@ -127,14 +141,5 @@ public class Rassen {
                 + " Lebenspunkte, " + this.getGeschwindigkeit()
                 + " Geschwindigkeit, " + this.getSchaden() + " Schaden, "
                 + this.getRuestung() + "Rüstung");
-    }
-
-	 /**
-     * 
-     * @return
-     */
-    public double getLeben() {
-    	return this.leben;
-
     }
 }

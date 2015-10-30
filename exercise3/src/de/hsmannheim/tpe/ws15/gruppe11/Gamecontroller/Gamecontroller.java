@@ -19,7 +19,7 @@ public class Gamecontroller {
 	 * Die Konstanten sind für die Squadnamen zuständig.
 	 */
 	private final String SPIELER1 = "The walking dead";
-	private final String SPIELER2 = "The killers";
+	private final String SPIELER2 = "The immortal";
 
 	/**
 	 * Die Attribute sind zur Bekanntgabe der Runde, Spieler und welche Gruppe
@@ -58,16 +58,14 @@ public class Gamecontroller {
 	 * 
 	 */
 	public void runGame() {
-		System.out.println("---------------------------------------------");
-		System.out.println("--------------------------------------------- \n");
-		System.out.println(squad1.toString() + "\n\n" + squad2.toString());
 
+		System.out.println(squad1.toString() + "\n\n" + squad2.toString());
+	
 		while (squad1.teamLebendig() && squad2.teamLebendig()) {
 			this.setRunde(this.getRunde() + 1);
-			System.out.println("---------------------------------------------");
-			System.out.println("--------------- Round " + this.getRunde()
-					+ " Fight ---------------");
-			System.out.println("---------------------------------------------");
+
+			System.out.println("Runde" + this.getRunde() );
+	
 
 			int wesen1Index = random(squad1);
 			int wesen2Index = random(squad2);
@@ -78,7 +76,7 @@ public class Gamecontroller {
 			System.out.println(wesen1.getClass().getSimpleName()
 					+ " (Squad 1) vs " + wesen2.getClass().getSimpleName()
 					+ " (Squad 2)");
-			System.out.println("---------------------------------------------");
+			System.out.println("------------------------------------");
 
 			double damage;
 			while (wesen1.isLebendig() && wesen2.isLebendig()) {
@@ -100,8 +98,7 @@ public class Gamecontroller {
 				}
 			}
 
-			System.out.println("---------------------------------------------");
-			System.out.println("---------------------------------------------");
+			System.out.println("------------------------------------");
 			System.out.println("Runde " + this.getRunde() + " wurde beendet");
 			if (wesen1.isLebendig()) {
 				System.out.println(wesen1.getClass().getSimpleName()
@@ -113,7 +110,7 @@ public class Gamecontroller {
 
 		}
 
-		System.out.println("---------------------------------------------");
+		System.out.println("------------------------------------");
 		if (squad1.teamLebendig()) {
 			System.out.println("Squad 1 '" + squad1.getSquadName()
 					+ "' hat gewonnen");
@@ -138,7 +135,7 @@ public class Gamecontroller {
 		System.out.println(angreifer.getClass().getSimpleName() + " greift "
 				+ gegner.getClass().getSimpleName() + " an");
 		System.out.println(gegner.getClass().getSimpleName() + " hat " + damage
-				+ " Schaden abbekommen und hat jetzt " + gegner.getLeben()
+				+ " Schaden erlitten und hat nun " + gegner.getLeben()
 				+ " Lebenspunkte");
 	}
 

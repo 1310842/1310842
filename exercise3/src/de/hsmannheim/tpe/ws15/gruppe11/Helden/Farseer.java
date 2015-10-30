@@ -8,12 +8,12 @@ import de.hsmannheim.tpe.ws15.gruppe11.Squad.Held;
 public class Farseer extends Orks implements Held {
 
 	/**
-	 * Attribute
+	 * Den Attribute bonus haben nur Helden.
 	 */
 	public double bonus = 1.2;
 
 	/**
-	 * Constructor
+	 * Im Konstruktor wird zur Superklasse der Preis des Helden weitergegeben.
 	 */
 	public Farseer() {
 		super();
@@ -21,7 +21,7 @@ public class Farseer extends Orks implements Held {
 	}
 
 	/**
-	 * Method attack and decrease life of entity
+	 * Die Methode attack berechnet den Schaden unter der Berücksichtigung des Bonusschadens vom Helden.
 	 */
 	public double attack(Rassen wesen) {
 		double damage = this.getGeschwindigkeit() * this.getSchaden()
