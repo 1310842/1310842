@@ -22,10 +22,10 @@ public class Farseer extends Orks {
 	 * Method attack and decrease life of entity
 	 */
 	public double attack(Rassen wesen) {
-		double damage = wesen.getGeschwindigkeit() * wesen.getSchaden()
+		double damage = this.getGeschwindigkeit() * this.getSchaden()
 				* this.bonus;
-		double leben = wesen.getLeben() - (super.getRuestung() * damage);
-		wesen.setLeben(leben);
+		double leben = damage - ((wesen.getRuestung() * damage)/100);
+		wesen.setLeben(wesen.getLeben()-leben);
 		return damage;
 	}
 

@@ -23,10 +23,10 @@ public class Daemonenjaeger extends Nachtelf  implements Held {
 	 * Die Methode attack berechnet den Schaden unter der Berücksichtigung des Bonusschadens vom Helden.
 	 */
 	public double attack(Rassen wesen) {
-		double damage = wesen.getGeschwindigkeit() * wesen.getSchaden()
+		double damage = this.getGeschwindigkeit() * this.getSchaden()
 				* this.bonus;
-		double leben = wesen.getLeben() - (super.getRuestung() * damage);
-		wesen.setLeben(leben);
+		double leben = damage - ((wesen.getRuestung() * damage)/100);
+		wesen.setLeben(wesen.getLeben()-leben);
 		return damage;
 	}
 }
