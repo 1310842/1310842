@@ -5,7 +5,7 @@ public class Simulation {
 	public static void main(String args[]) {
 		
 		/**
-		 * Das Objekt Game ruft die Methode squad Erstellen auf.
+		 * Das Objekt Game ruft die Methode squadErstellen auf.
 		 */
 
 		Gamecontroller game = new Gamecontroller();
