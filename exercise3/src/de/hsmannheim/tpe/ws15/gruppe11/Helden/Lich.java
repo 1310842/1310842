@@ -2,8 +2,9 @@ package de.hsmannheim.tpe.ws15.gruppe11.Helden;
 
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Rassen;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Untote;
+import de.hsmannheim.tpe.ws15.gruppe11.Squad.Held;
 
-public class Lich extends Untote {
+public class Lich extends Untote implements Held{
 
 	/**
 	 * Attribute

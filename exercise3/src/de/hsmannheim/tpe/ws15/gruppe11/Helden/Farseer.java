@@ -2,8 +2,9 @@ package de.hsmannheim.tpe.ws15.gruppe11.Helden;
 
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Orks;
 import de.hsmannheim.tpe.ws15.gruppe11.Rassen.Rassen;
+import de.hsmannheim.tpe.ws15.gruppe11.Squad.Held;
 
-public class Farseer extends Orks {
+public class Farseer extends Orks implements Held {
 
 	/**
 	 * Attribute
