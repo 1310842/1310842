@@ -151,8 +151,8 @@ public class JUnitTest {
 
         spieler1.attack(spieler2);
         spieler2.attack(spieler1);
-        assertEquals(59.0, spieler2.getLeben(), PRECISION);
-        assertEquals(56.0, spieler1.getLeben(), PRECISION);
+        assertEquals(42.8, spieler2.getLeben(), PRECISION);
+        assertEquals(43.2, spieler1.getLeben(), PRECISION);
     }
 
     /**

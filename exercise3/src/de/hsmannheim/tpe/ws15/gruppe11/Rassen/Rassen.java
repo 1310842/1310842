@@ -1,5 +1,7 @@
 package de.hsmannheim.tpe.ws15.gruppe11.Rassen;
 
+import java.util.Random;
+
 public class Rassen {
 
 	/**
@@ -10,6 +12,8 @@ public class Rassen {
 	private double geschwindigkeit;
 	private double ruestung;
 	private double preis;
+	protected boolean mojo;
+	protected Random r = new Random ();
 
 	/**
 	 * Konstruktor
@@ -26,6 +30,7 @@ public class Rassen {
 		this.geschwindigkeit = geschwindigkeit;
 		this.ruestung = rüstung;
 		this.preis = preis;
+		
 	}
 
 	/**
@@ -36,6 +41,19 @@ public class Rassen {
 		if(this.isLebendig()){
 
 		damage = this.geschwindigkeit * this.schaden;
+		int zufall = r.nextInt(1);
+		if (zufall == 0) {
+			mojo = false;
+		} else {
+			mojo = true;
+		}
+		
+		if (mojo = false) {
+			damage = damage * 0.9;
+		} else {
+			damage = damage * 1.2;
+
+		}
 		damage = damage - ((wesen.ruestung * damage)/100);
 		double leben = wesen.getLeben() - damage;
 		wesen.setLeben(leben);
@@ -52,6 +70,22 @@ public class Rassen {
 			return true;
 		}
 		return false;
+	}
+
+	public boolean isMojo() {
+		return mojo;
+	}
+
+	public void setMojo(boolean mojo) {
+		this.mojo = mojo;
+	}
+
+	public Random getR() {
+		return r;
+	}
+
+	public void setR(Random r) {
+		this.r = r;
 	}
 
 	/**
