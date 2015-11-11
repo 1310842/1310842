@@ -8,8 +8,9 @@ public class Personengesellschaft extends Unternehmen {
 
 	private ArrayList<Buerger> personenListe = new ArrayList<>();
 
-	public Personengesellschaft(String personengesellschaftName) {
-		super(personengesellschaftName);
+	public Personengesellschaft(String personengesellschaftName, int gewinn) {
+		super(personengesellschaftName, gewinn);
+
 	}
 
 	private ArrayList<Buerger> getPersonenListe() {
