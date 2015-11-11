@@ -3,9 +3,9 @@ package de.hsmannheim.tpe.ws15.Mutant;
 import de.hsmannheim.tpe.ws15.Metropolis.Einwohner;
 
 /**
- * Die Klasse Mutant pr�sentiert Einwohner der Stadt Metropolis. Mutanten haben
+ * Die Klasse Mutant praesentiert Einwohner der Stadt Metropolis. Mutanten haben
  * eine Mutation. Sie k�nnen Superhelden oder Schurken sein. Superhelden und
- * Schurken k�nnen k�mpfen.
+ * Schurken k�nnen kaempfen.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra

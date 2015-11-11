@@ -1,9 +1,9 @@
 package de.hsmannheim.tpe.ws15.Metropolis;
 
 /**
- * Die Klasse Einwohner präsentiert ein Lebewesen, welches in der Stadt
+ * Die Klasse Einwohner praesentiert ein Lebewesen, welches in der Stadt
  * Metroplis lebt. Das Lebewesen kann entweder ein Mensch oder Mutant sein.
- * Jedes Lebewesen verfügt über ein Einkommen und hat einen Namen.
+ * Jedes Lebewesen verfuegt ï¿½ber ein Einkommen und hat einen Namen.
  * <p>
  * 
  * @author Car, Isra
