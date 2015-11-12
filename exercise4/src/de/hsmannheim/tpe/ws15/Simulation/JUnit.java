@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.Metropolis;
+package de.hsmannheim.tpe.ws15.Simulation;
 
 import static org.junit.Assert.*;
 

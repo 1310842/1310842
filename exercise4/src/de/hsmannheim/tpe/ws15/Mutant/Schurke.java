@@ -1,5 +1,7 @@
 package de.hsmannheim.tpe.ws15.Mutant;
 
+import de.hsmannheim.tpe.ws15.Staat.Finanzamt;
+
 /**
  * Die Klasse SchurkeAzog praesentiert Lebewesen der Rasse Mutant, welcher als
  * Einwohner in der Stadt Metropolis lebt.
@@ -14,6 +16,7 @@ public class Schurke extends Mutant {
 
 	public Schurke(String name, int einkommen, String mutation) {
 		super(name, einkommen, mutation);
+		Finanzamt.anmelden(this);
 	}
 
 	public boolean kaempfen(Superheld superheld) {

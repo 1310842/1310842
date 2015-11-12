@@ -37,6 +37,5 @@ public class Superheld extends Mutant {
 	private void setList(ArrayList<String> list) {
 		this.list = list;
 	}
-	
-	
+
 }

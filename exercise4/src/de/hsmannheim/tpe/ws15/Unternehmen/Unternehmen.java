@@ -11,6 +11,12 @@ public class Unternehmen {
 
 	}
 
+	@Override
+	public String toString() {
+		return ("(" + this.getClass().getSimpleName() + ") " + this.getUnternehmenName() + ", Gewinn: "
+				+ this.getGewinn());
+	}
+
 	private String getUnternehmenName() {
 		return unternehmenName;
 	}

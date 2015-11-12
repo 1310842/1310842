@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 import de.hsmannheim.tpe.ws15.Interface.KoerperschaftssteuerI;
 import de.hsmannheim.tpe.ws15.Mutant.Schurke;
+import de.hsmannheim.tpe.ws15.Staat.Finanzamt;
 
-public class Syndikat implements KoerperschaftssteuerI {
+public class Syndikat  {
 
 	private String syndikatName;
 
@@ -13,6 +14,7 @@ public class Syndikat implements KoerperschaftssteuerI {
 
 	public Syndikat(String syndikatName, int anzahlSchurke) {
 		this.syndikatName = syndikatName;
+		Finanzamt.anmelden(this);
 
 	}
 
@@ -40,5 +42,15 @@ public class Syndikat implements KoerperschaftssteuerI {
 
 		return einkommen;
 
+	}
+	
+	@Override
+	public String toString() {
+		String schurken = "";
+		
+		for (Schurke s : syndikat) {
+			schurken += s.getName()+"\n";
+		}
+		return (this.syndikatName + "\n" +schurken);
 	}
 }
