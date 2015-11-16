@@ -1,10 +1,11 @@
-package de.hsmannheim.tpe.ws15.Unternehmen;
+package de.hsmannheim.tpe.ws15.unternehmen;
 
 import java.util.ArrayList;
-import de.hsmannheim.tpe.ws15.Interface.KoerperschaftssteuerI;
-import de.hsmannheim.tpe.ws15.Mensch.Buerger;
-import de.hsmannheim.tpe.ws15.Staat.Finanzamt;
-import de.hsmannheim.tpe.ws15.Steuer.Gewerbesteuer;
+
+import de.hsmannheim.tpe.ws15.mensch.Buerger;
+import de.hsmannheim.tpe.ws15.staat.Finanzamt;
+import de.hsmannheim.tpe.ws15.steuer.Gewerbesteuer;
+import de.hsmannheim.tpe.ws15.steuer.KoerperschaftssteuerI;
 
 public class Kapitalgesellschaft extends Unternehmen {
 

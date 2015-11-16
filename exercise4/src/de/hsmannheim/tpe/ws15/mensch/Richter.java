@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.Mensch;
+package de.hsmannheim.tpe.ws15.mensch;
 
 public class Richter extends Mensch {
 

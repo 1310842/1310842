@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.Steuer;
+package de.hsmannheim.tpe.ws15.steuer;
 
 public class Gewerbesteuer {
 

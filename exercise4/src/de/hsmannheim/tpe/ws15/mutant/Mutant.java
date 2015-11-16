@@ -1,6 +1,6 @@
-package de.hsmannheim.tpe.ws15.Mutant;
+package de.hsmannheim.tpe.ws15.mutant;
 
-import de.hsmannheim.tpe.ws15.Metropolis.Einwohner;
+import de.hsmannheim.tpe.ws15.metropolis.Einwohner;
 
 /**
  * Die Klasse Mutant praesentiert Einwohner der Stadt Metropolis. Mutanten haben

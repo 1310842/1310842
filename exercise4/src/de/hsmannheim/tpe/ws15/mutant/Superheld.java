@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.Mutant;
+package de.hsmannheim.tpe.ws15.mutant;
 
 import java.util.ArrayList;
 

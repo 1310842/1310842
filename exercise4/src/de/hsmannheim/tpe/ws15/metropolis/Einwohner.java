@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.Metropolis;
+package de.hsmannheim.tpe.ws15.metropolis;
 
 /**
  * Die Klasse Einwohner praesentiert ein Lebewesen, welches in der Stadt

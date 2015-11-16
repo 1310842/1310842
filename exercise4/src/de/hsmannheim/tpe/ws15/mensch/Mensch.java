@@ -1,6 +1,6 @@
-package de.hsmannheim.tpe.ws15.Mensch;
+package de.hsmannheim.tpe.ws15.mensch;
 
-import de.hsmannheim.tpe.ws15.Metropolis.Einwohner;
+import de.hsmannheim.tpe.ws15.metropolis.Einwohner;
 
 public abstract class Mensch extends Einwohner {
 

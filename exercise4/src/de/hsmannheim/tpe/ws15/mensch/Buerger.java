@@ -1,8 +1,8 @@
-package de.hsmannheim.tpe.ws15.Mensch;
+package de.hsmannheim.tpe.ws15.mensch;
 
-import de.hsmannheim.tpe.ws15.Interface.EinkommenssteuerI;
-import de.hsmannheim.tpe.ws15.Staat.Finanzamt;
-import de.hsmannheim.tpe.ws15.Steuer.Einkommenssteuer;
+import de.hsmannheim.tpe.ws15.staat.Finanzamt;
+import de.hsmannheim.tpe.ws15.steuer.EinkommenssteuerI;
+import de.hsmannheim.tpe.ws15.steuer.Einkommensteuer;
 
 public class Buerger extends Mensch implements EinkommenssteuerI {
 
@@ -13,7 +13,7 @@ public class Buerger extends Mensch implements EinkommenssteuerI {
 
 	@Override
 	public int berechneEinkommenssteuer() {
-		return (EinkommenssteuerI.berechneEinkommensSteuer(this.einkommen));
+		return (Einkommensteuer.berechneEinkommensSteuer(this.einkommen));
 
 	}
 
