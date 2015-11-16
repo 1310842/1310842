@@ -34,17 +34,29 @@ public class Syndikat {
 
 	}
 
+	/**
+	 * Die Getmethode holt die Arrayliste syndikat und macht sie zugreifbar.
+	 * 
+	 * @return
+	 */
+
 	public ArrayList<Schurke> getSyndikat() {
 		return syndikat;
 	}
 
+	/**
+	 * Durch die Setmethode setSyndikat lässt sich der Zustand von der Arraylist
+	 * syndikat verändern.
+	 * 
+	 * @param syndikat
+	 */
 	private void setSyndikat(ArrayList<Schurke> syndikat) {
 		this.syndikat = syndikat;
 	}
 
 	/**
-	 * Durch die Methode addSchurken können Schurken in die ArrayListe gespeichert
-	 * werden.
+	 * Durch die Methode addSchurken können Schurken in die ArrayListe
+	 * gespeichert werden.
 	 * 
 	 * @param schurke
 	 */
@@ -55,7 +67,7 @@ public class Syndikat {
 	}
 
 	/**
-	 * Getmethode holt den Syndikat Name.
+	 * Die Getmethode holt den Syndikat Name und macht sie zugreifbar.
 	 * 
 	 * @return
 	 */
@@ -65,7 +77,8 @@ public class Syndikat {
 	}
 
 	/**
-	 * Setmethode zum Benennen des Syndikats.
+	 * Die Setmethode setSyndikatname übergibt den Parameter syndikatName vom
+	 * Datentyp String in das Attributfeld syndikatName.
 	 * 
 	 * @param syndikatName
 	 */
@@ -73,6 +86,19 @@ public class Syndikat {
 	private void setSyndikatName(String syndikatName) {
 		this.syndikatName = syndikatName;
 	}
+
+	/**
+	 * Die Methode berechneKoerperschaftssteuer berechnet die Steuer für das
+	 * Einkommen des Schurken.
+	 * 
+	 * Zuerst wird der Variable einkommen vom Datentyp int der Wert 0
+	 * zugewiesen. Die Variable s vom Typ Schurke durchläuft die Arraylist
+	 * syndikat komplett. Bei jedem durchlauf addiert die Variable s das
+	 * Einkommen eines Schurken mit der Variable einkommen drauf. Letztlich wird
+	 * das einkommen mit der Koerperschaftssteuer multipliziert und ausgegeben.
+	 * 
+	 * @return
+	 */
 
 	public int berechneKoerperschaftssteuer() {
 		int einkommen = 0;
@@ -86,6 +112,14 @@ public class Syndikat {
 		return einkommen;
 
 	}
+
+	/**
+	 * Die Methode toString übergibt Information über die Klasse Syndikat. Sie
+	 * initialisiert der Variable Schurke vom Datentyp String einen leeren
+	 * String. Dieser wird in der Forschleife mit dem aktuellen Schurkennamen
+	 * ersetzt. Letztlich wird der SyndikatName mit dem Name des Schurken
+	 * herausgegeben.
+	 */
 
 	@Override
 	public String toString() {
