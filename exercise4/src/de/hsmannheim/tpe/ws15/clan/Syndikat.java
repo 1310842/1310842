@@ -7,7 +7,7 @@ import de.hsmannheim.tpe.ws15.staat.Finanzamt;
 import de.hsmannheim.tpe.ws15.steuer.KoerperschaftssteuerI;
 
 /**
- * Die Klasse Syndikat präsentiert einen Zusammenschluss mehrerer Schurken.
+ * Die Klasse Syndikat definiert einen Aufnahmebereich für Schurken.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -17,16 +17,21 @@ import de.hsmannheim.tpe.ws15.steuer.KoerperschaftssteuerI;
 public class Syndikat {
 
 	/**
-	 * Attribute. Aufgenommene Schurken werden in eine Liste gespeichert.
+	 * Anlegung des Attributs syndikatName vom Datentyp String zur Benennung des Syndikats.
+	 * Anlegung des Objekts Arraylist syndikat vom Typ Schurke. Die Arrayliste
+	 * bietet einen Aufnahmebereich für Objekte des Typs Schurken.
 	 */
 
 	private String syndikatName;
 	private ArrayList<Schurke> syndikat = new ArrayList<Schurke>();
 
 	/**
-	 * Konstruktor.
+	 * Der Konstruktor zeigt auf das Attribute syndikatName und definiert einen
+	 * Übergabeparameter. Bei jedem Aufruf des Konstruktors Syndikat wird
+	 * gleichzeitig die Methode anmelden von der Klasse Finanzamt aufgerufen.
 	 * 
 	 * @param syndikatName
+	 * 
 	 */
 	public Syndikat(String syndikatName) {
 		this.syndikatName = syndikatName;
@@ -35,9 +40,10 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Getmethode holt die Arrayliste syndikat und macht sie zugreifbar.
+	 * Die Methode holt die Arrayliste syndikat und macht sie durch die Rückgabe
+	 * von syndikat zugreifbar.
 	 * 
-	 * @return
+	 * @return syndikat
 	 */
 
 	public ArrayList<Schurke> getSyndikat() {
@@ -55,8 +61,8 @@ public class Syndikat {
 	}
 
 	/**
-	 * Durch die Methode addSchurken können Schurken in die ArrayListe
-	 * gespeichert werden.
+	 * Die Methode addSchurke zeigt auf das Attribute syndikat und fügt den
+	 * Übergabeparameter schurke von der Klasse Schurke hinein.
 	 * 
 	 * @param schurke
 	 */
@@ -67,9 +73,10 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Getmethode holt den Syndikat Name und macht sie zugreifbar.
+	 * Die Methode getSyndikatName macht das Attribute syndikatName für äußere
+	 * Einflüsse zugreifbar.
 	 * 
-	 * @return
+	 * @return syndikatName
 	 */
 
 	public String getSyndikatName() {
