@@ -6,7 +6,7 @@ import de.hsmannheim.tpe.ws15.steuer.Einkommensteuer;
 
 /**
  * Die Klasse Buerger ist eine Unterklasse von Mensch. Sie Präsentiert die
- * Eigenschaften eines Buergers, die  in Metropolis leben.
+ * Eigenschaften eines Buergers, die in Metropolis leben.
  * 
  * @author Car, Isra.
  * @author Celik, Kuebra.
@@ -19,11 +19,11 @@ public class Buerger extends Mensch implements EinkommenssteuerI {
 	 * für die Klasse Buerger.
 	 * 
 	 * @param name
-	 *            Der Name des Buerger.
+	 *            des Buergers.
 	 * @param einkommen
-	 *            Das Einkommen des Buerger.
+	 *            des Buergers.
 	 * @param alter
-	 *            Der Alter des Buerger.
+	 *            des Buergers.
 	 */
 
 	public Buerger(String name, int einkommen, int alter) {
