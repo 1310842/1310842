@@ -17,20 +17,22 @@ import de.hsmannheim.tpe.ws15.steuer.KoerperschaftssteuerI;
 public class Syndikat {
 
 	/**
-	 * Anlegung des Attributs syndikatName vom Datentyp String zur Benennung des Syndikats.
-	 * Anlegung des Objekts Arraylist syndikat vom Typ Schurke. Die Arrayliste
-	 * bietet einen Aufnahmebereich für Objekte des Typs Schurken.
+	 * Anlegung des Attributs syndikatName zur Benennung des Syndikats und
+	 * anlegung der Arraylist syndikat vom Typ Schurke zum Speichern der
+	 * Schurken.
 	 */
 
 	private String syndikatName;
 	private ArrayList<Schurke> syndikat = new ArrayList<Schurke>();
 
 	/**
-	 * Der Konstruktor zeigt auf das Attribute syndikatName und definiert einen
-	 * Übergabeparameter. Bei jedem Aufruf des Konstruktors Syndikat wird
-	 * gleichzeitig die Methode anmelden von der Klasse Finanzamt aufgerufen.
+	 * Instanziierung der Klasse Syndikat als Konstruktor. Der Übergabeparameter
+	 * definiert einen Anfangswert.
 	 * 
-	 * @param syndikatName
+	 * @param übergibt
+	 *            den Namen zur Benennung des Syndikats.
+	 * 
+	 * 
 	 * 
 	 */
 	public Syndikat(String syndikatName) {
@@ -40,10 +42,10 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Methode holt die Arrayliste syndikat und macht sie durch die Rückgabe
-	 * von syndikat zugreifbar.
+	 * Die Methode getsyndikat macht die Arraylist des Typs Schurke durch den
+	 * Rückgabewert zugreifbar.
 	 * 
-	 * @return syndikat
+	 * @return gibt die Liste <b>syndikat</b> zurück.
 	 */
 
 	public ArrayList<Schurke> getSyndikat() {
@@ -51,20 +53,23 @@ public class Syndikat {
 	}
 
 	/**
-	 * Durch die Setmethode setSyndikat lässt sich der Zustand von der Arraylist
-	 * syndikat verändern.
+	 * Die Setmethode setsyndikat ermöglicht eine Zustandsveränderung in der
+	 * Arraylist syndikat.
 	 * 
-	 * @param syndikat
+	 * @param übergibt
+	 *            den Parameter syndikat zur Zustandsveränderung in der
+	 *            Arraylist.
 	 */
 	private void setSyndikat(ArrayList<Schurke> syndikat) {
 		this.syndikat = syndikat;
 	}
 
 	/**
-	 * Die Methode addSchurke zeigt auf das Attribute syndikat und fügt den
-	 * Übergabeparameter schurke von der Klasse Schurke hinein.
+	 * Die Methode addSchurke ermöglicht das Anlegen von Objekten des Typs
+	 * Schurke in die Arraylist syndikat.
 	 * 
-	 * @param schurke
+	 * @param übergibt
+	 *            den Schurken in die Arraylist syndikat.
 	 */
 
 	public void addSchurke(Schurke schurke) {
@@ -76,7 +81,7 @@ public class Syndikat {
 	 * Die Methode getSyndikatName macht das Attribute syndikatName für äußere
 	 * Einflüsse zugreifbar.
 	 * 
-	 * @return syndikatName
+	 * @return gibt syndikatName zur Benennung zurück.
 	 */
 
 	public String getSyndikatName() {
@@ -84,10 +89,12 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Setmethode setSyndikatname übergibt den Parameter syndikatName vom
-	 * Datentyp String in das Attributfeld syndikatName.
+	 * Die Setmethode setSyndikatname übergibt den Übergabeparameter
+	 * syndikatName zum Überschreiben des Attributs syndikatName.
 	 * 
-	 * @param syndikatName
+	 * @param überschreibt
+	 *            den im Attribute syndikatName vorhandenen Wert.
+	 * 
 	 */
 
 	private void setSyndikatName(String syndikatName) {
@@ -95,16 +102,11 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Methode berechneKoerperschaftssteuer berechnet die Steuer für das
-	 * Einkommen des Schurken.
+	 * Die Methode berechneKoerperschaftssteuer holt das Einkommen der
+	 * Mitglieder, die im Syndikat vorhanden sind und berechnet die
+	 * Koerperschaftssteuer.
 	 * 
-	 * Zuerst wird der Variable einkommen vom Datentyp int der Wert 0
-	 * zugewiesen. Die Variable s vom Typ Schurke durchläuft die Arraylist
-	 * syndikat komplett. Bei jedem durchlauf addiert die Variable s das
-	 * Einkommen eines Schurken mit der Variable einkommen drauf. Letztlich wird
-	 * das einkommen mit der Koerperschaftssteuer multipliziert und ausgegeben.
-	 * 
-	 * @return
+	 * @return gibt den Nettoeinkommen des Syndikats aus.
 	 */
 
 	public int berechneKoerperschaftssteuer() {
@@ -121,11 +123,8 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Methode toString übergibt Information über die Klasse Syndikat. Sie
-	 * initialisiert der Variable Schurke vom Datentyp String einen leeren
-	 * String. Dieser wird in der Forschleife mit dem aktuellen Schurkennamen
-	 * ersetzt. Letztlich wird der SyndikatName mit dem Name des Schurken
-	 * herausgegeben.
+	 * Die Methode toString gibt den Name des Syndikats mit dem Name des
+	 * Schurken aus.
 	 */
 
 	@Override
