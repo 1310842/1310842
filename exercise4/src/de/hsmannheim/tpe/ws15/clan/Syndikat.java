@@ -27,13 +27,10 @@ public class Syndikat {
 
 	/**
 	 * Instanziierung der Klasse Syndikat als Konstruktor. Der Übergabeparameter
-	 * definiert einen Anfangswert.
+	 * definiert einen Anfangswert für das Objekt Syndikat.
 	 * 
 	 * @param übergibt
 	 *            den Namen zur Benennung des Syndikats.
-	 * 
-	 * 
-	 * 
 	 */
 	public Syndikat(String syndikatName) {
 		this.syndikatName = syndikatName;
@@ -50,18 +47,6 @@ public class Syndikat {
 
 	public ArrayList<Schurke> getSyndikat() {
 		return syndikat;
-	}
-
-	/**
-	 * Die Setmethode setsyndikat ermöglicht eine Zustandsveränderung in der
-	 * Arraylist syndikat.
-	 * 
-	 * @param übergibt
-	 *            den Parameter syndikat zur Zustandsveränderung in der
-	 *            Arraylist.
-	 */
-	private void setSyndikat(ArrayList<Schurke> syndikat) {
-		this.syndikat = syndikat;
 	}
 
 	/**
@@ -89,19 +74,6 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Setmethode setSyndikatname übergibt den Übergabeparameter
-	 * syndikatName zum Überschreiben des Attributs syndikatName.
-	 * 
-	 * @param überschreibt
-	 *            den im Attribute syndikatName vorhandenen Wert.
-	 * 
-	 */
-
-	private void setSyndikatName(String syndikatName) {
-		this.syndikatName = syndikatName;
-	}
-
-	/**
 	 * Die Methode berechneKoerperschaftssteuer holt das Einkommen der
 	 * Mitglieder, die im Syndikat vorhanden sind und berechnet die
 	 * Koerperschaftssteuer.
@@ -116,7 +88,7 @@ public class Syndikat {
 
 		}
 
-		einkommen = (int) (einkommen * KoerperschaftssteuerI.linearKoerperSteuer);
+		einkommen = (int) (einkommen * KoerperschaftssteuerI.LINEARKOERPERSTEUER);
 
 		return einkommen;
 

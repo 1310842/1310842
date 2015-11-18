@@ -5,14 +5,18 @@ import de.hsmannheim.tpe.ws15.steuer.EinkommenssteuerI;
 import de.hsmannheim.tpe.ws15.steuer.Einkommensteuer;
 
 /**
- * Die Klasse SchurkeAzog praesentiert Lebewesen der Rasse Mutant, welcher als
- * Einwohner in der Stadt Metropolis lebt.
+ * Die Klasse <b>Schurke</b> ist eine Unterklasse von <b>Mutant</b>. Sie
+ * praesentiert die Eigenschaften des Schurken.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
  */
 
 public class Schurke extends Mutant implements EinkommenssteuerI {
+
+	/**
+	 * Deklaration des Attributs <b>schwaeche</b>.
+	 */
 
 	private String schwaeche;
 
@@ -21,6 +25,15 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 		this.schwaeche = schwaeche;
 		Finanzamt.anmelden(this);
 	}
+
+	/**
+	 * Die Methode kaempfen prüft ob der Schurke oder Superheld gewonnen hat.
+	 * 
+	 * @param <b>superheld</b>
+	 *            übergibt den Namen des Superhelden.
+	 * @return gibt den <b>name</b> des verlorenen bzw. gewonnen Superhelden
+	 *         zurück.
+	 */
 
 	public String kaempfen(Superheld superheld) {
 		if (superheld.getList().contains(this.schwaeche)) {
@@ -31,13 +44,22 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 
 	}
 
+	/**
+	 * Die Methode <b>getSchwaeche</b> gibt <b>schwaeche</b> zurück und macht es
+	 * zugreifbar.
+	 * 
+	 * @return gibt <b>name</b> zurück.
+	 */
+
 	public String getSchwaeche() {
 		return schwaeche;
 	}
 
-	private void setSchwaeche(String schwaeche) {
-		this.schwaeche = schwaeche;
-	}
+	/**
+	 * Die Methode <b>berechneEinkommenssteuer</b> holt sich das Einkommen vom
+	 * Objekt des Typs Schurke, berechnet die Einkommensteuer auf das Einkommen
+	 * und gibt das Nettoeinkommen zurück.
+	 */
 
 	@Override
 	public int berechneEinkommenssteuer() {

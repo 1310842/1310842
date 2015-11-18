@@ -5,8 +5,8 @@ import de.hsmannheim.tpe.ws15.steuer.EinkommenssteuerI;
 import de.hsmannheim.tpe.ws15.steuer.Einkommensteuer;
 
 /**
- * Die Klasse Buerger ist eine Unterklasse von Mensch. Sie Präsentiert die
- * Eigenschaften eines Buergers, die in Metropolis leben.
+ * Die Klasse Buerger ist eine Unterklasse von der Klasse Mensch. Sie
+ * praesentiert die Eigenschaften des Buergers.
  * 
  * @author Car, Isra.
  * @author Celik, Kuebra.
@@ -15,15 +15,17 @@ import de.hsmannheim.tpe.ws15.steuer.Einkommensteuer;
 public class Buerger extends Mensch implements EinkommenssteuerI {
 
 	/**
-	 * Instanziierung des Buergers. Die Parameter definieren die Anfangswerte
-	 * für die Klasse Buerger.
+	 * Instanziierung des Buergers als Konstruktor. Die Übergabeparameter
+	 * definieren die Anfangswerte für das Objekt Buerger. Bei jedem Aufruf des
+	 * Konstruktors wird automatisch die Methode anmelden in der Klasse
+	 * Finanzamt aufgerufen. Die Methode anmelden verwendet das Objekt weiter.
 	 * 
-	 * @param name
-	 *            des Buergers.
-	 * @param einkommen
-	 *            des Buergers.
-	 * @param alter
-	 *            des Buergers.
+	 * @param <b>name</b>
+	 *            übergibt den Namen zur Benennung des Objekts.
+	 * @param <b>einkommen</b>
+	 *            übergibt das Einkommen des Objekts.
+	 * @param <b>alter</b>
+	 *            übergibt das Alter des Objekts.
 	 */
 
 	public Buerger(String name, int einkommen, int alter) {
@@ -32,8 +34,10 @@ public class Buerger extends Mensch implements EinkommenssteuerI {
 	}
 
 	/**
-	 * Die Methode berechneEinkommenssteuer berechnet vom Buerger die
-	 * Einkommenssteuer und gibt diese zurück.
+	 * Die Methode berechneEinkommenssteuer holt das Einkommen des Objekts
+	 * Buerger und verwendet die Methode <b>berechneEinkommensSteuer</b> der
+	 * Klasse Einkommensteuer und gibt das Nettoeinkommen des Objekts Buerger
+	 * zurück.
 	 */
 
 	@Override
@@ -43,8 +47,8 @@ public class Buerger extends Mensch implements EinkommenssteuerI {
 	}
 
 	/**
-	 * Die Methode toString gibt die Information Name und Alter über den Buerger
-	 * aus.
+	 * Die Methode toString gibt Information über die Identität und Alter des
+	 * Objekts Buerger.
 	 */
 
 	@Override

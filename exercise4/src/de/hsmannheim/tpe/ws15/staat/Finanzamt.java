@@ -19,39 +19,33 @@ public abstract class Finanzamt {
 	private static ArrayList<Personengesellschaft> personengesellschaft = new ArrayList<Personengesellschaft>();
 	private static ArrayList<Schurke> schurken = new ArrayList<Schurke>();
 
-    public static int berechneGesamtsteuer() {
-        int gesamtsteuer = 0;
+	public static int berechneGesamtsteuer() {
+		int gesamtsteuer = 0;
 
-        // Berechnung der Körperschaftsteuer des Syndikats
-        for (Syndikat syndikat : syndikat) {
-            gesamtsteuer += syndikat.berechneKoerperschaftssteuer();
-        }
+		for (Syndikat syndikat : syndikat) {
+			gesamtsteuer += syndikat.berechneKoerperschaftssteuer();
+		}
 
-        // Berechnung der Körperschafts und Gewerbesteuer des
-        // Kapitalgesellschaftes
-        for (Kapitalgesellschaft kap : kapitalgesellschaft) {
-            gesamtsteuer += kap.berechneGewerbesteuer();
-            gesamtsteuer += kap.berechneGewerbesteuer();
-        }
+		for (Kapitalgesellschaft kap : kapitalgesellschaft) {
+			gesamtsteuer += kap.berechneGewerbesteuer();
+			gesamtsteuer += kap.berechneGewerbesteuer();
+		}
 
-        // Berechnung der Einkommensteuer von Bürger
-        for (Buerger buerger : buerger) {
-            gesamtsteuer += buerger.berechneEinkommenssteuer();
-        }
+		for (Buerger buerger : buerger) {
+			gesamtsteuer += buerger.berechneEinkommenssteuer();
+		}
 
-        // Berechnung der Einkommen und Gewerbesteuer von Personengesellschaften
-        for (Personengesellschaft pGesellschaft : personengesellschaft) {
-            gesamtsteuer += pGesellschaft.berechneEinkommenssteuer();
-            gesamtsteuer += pGesellschaft.berechneGewerbesteuer();
-        }
+		for (Personengesellschaft pGesellschaft : personengesellschaft) {
+			gesamtsteuer += pGesellschaft.berechneEinkommenssteuer();
+			gesamtsteuer += pGesellschaft.berechneGewerbesteuer();
+		}
 
-        // Berechnung der Einkommensteuer von Schurken
-        for (Schurke schurken : schurken) {
-            gesamtsteuer += schurken.berechneEinkommenssteuer();
-        }
+		for (Schurke schurken : schurken) {
+			gesamtsteuer += schurken.berechneEinkommenssteuer();
+		}
 
-        return gesamtsteuer;
-    }
+		return gesamtsteuer;
+	}
 
 	public static void anmelden(Schurke schurke) {
 		schurken.add(schurke);

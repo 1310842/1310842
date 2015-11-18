@@ -3,8 +3,9 @@ package de.hsmannheim.tpe.ws15.mensch;
 import de.hsmannheim.tpe.ws15.metropolis.Einwohner;
 
 /**
- * Die abstrakte Klasse Mensch ist die Unterklasse von Einwohner und Oberklasse
- * von Buerger. Sie enthält die Eigenschaften die ein Mensch hat.
+ * Die abstrakte Klasse <b>Mensch</b> ist die Unterklasse von <b>Einwohner</b>
+ * und die Oberklasse von <b>Buerger</b> und <b>Richter</b>. Sie definiert
+ * zusätzliche Eigenschaften für all ihre Unterklassen.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -12,18 +13,21 @@ import de.hsmannheim.tpe.ws15.metropolis.Einwohner;
 
 public abstract class Mensch extends Einwohner {
 
+	/**
+	 * Deklaration des Attributs <b>alter</b>.
+	 */
+
 	private int alter;
 
 	/**
-	 * Instanziierung des Menschen. Die Parameter können von Unterklassen der
-	 * Klasse Mensch benutzt werden.
+	 * Instanziierung der Klasse Mensch als Konstruktor.
 	 * 
-	 * @param name
-	 *            des Menschen.
-	 * @param einkommen
-	 *            des Menschen.
-	 * @param alter
-	 *            des Menschen.
+	 * @param <b>name</b>
+	 *            übergibt den Namen des Objekts.
+	 * @param <b>name</b>
+	 *            übergibt das Einkommen des Objekts.
+	 * @param <b>name</b>
+	 *            übergibt das Alter des Objekts.
 	 */
 
 	public Mensch(String name, int einkommen, int alter) {
@@ -32,9 +36,10 @@ public abstract class Mensch extends Einwohner {
 	}
 
 	/**
-	 * Die Methode getAlter gibt den Alter des Menschen zurück.
+	 * Die Methode <b>getAlter</b> gibt <b>alter</b> zurück und macht es
+	 * zugreifbar.
 	 * 
-	 * @return Alter.
+	 * @return gibt <b>alter</b> zurück.
 	 */
 
 	public int getAlter() {
