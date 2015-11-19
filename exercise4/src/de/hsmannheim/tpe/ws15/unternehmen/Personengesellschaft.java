@@ -10,51 +10,42 @@ import de.hsmannheim.tpe.ws15.steuer.Gewerbesteuer;
 
 /**
  * Die Klasse Personengesellschaft ist eine Unterklasse der Klasse Unternehmen.
- * Hier werden angelegte Buerger in die Arrayliste personenListe hineingespeichert.
+ * In dieser sind die Buerger, die eine Personengesellschaft haben gespeichert.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
  */
 
-public class Personengesellschaft extends Unternehmen implements EinkommenssteuerI{
+public class Personengesellschaft extends Unternehmen implements EinkommenssteuerI {
 
 	/**
-	 * Arrayliste zum speichern der Buerger.
+	 * Deklaration der Arraylist <b>personenListe</b> vom Typ Buerger.
 	 */
+
 	private ArrayList<Buerger> personenListe = new ArrayList<>();
-	
+
 	/**
-	 * Konstruktor.
-	 * @param personengesellschaftName
-	 * @param gewinn
+	 * Instanziierung der Klasse Personengesellschaft als Konstruktor.
+	 * 
+	 * @param übergibt
+	 *            den Parameter <b>personengesellschaftName</b> an die
+	 *            Oberklasse.
+	 * @param übergibt
+	 *            den Parameter <b>gewinn</b> an die Oberklasse.
 	 */
+
 	public Personengesellschaft(String personengesellschaftName, int gewinn) {
 		super(personengesellschaftName, gewinn);
 		Finanzamt.anmelden(this);
 
 	}
-	
-	/**
-	 * Die Getmethode holt die Buerger aus der Arrayliste personenListe und stellt sie zur Verfügung.
-	 * @return
-	 */
-	private ArrayList<Buerger> getPersonenListe() {
-		return personenListe;
-	}
-	
-	/**
-	 * Die Setmethode setzt die angelegten Buerger in die Arrayliste personenListe.
-	 * @param personenListe
-	 */
-
-	private void setPersonenListe(ArrayList<Buerger> personenListe) {
-		this.personenListe = personenListe;
-	}
 
 	/**
-	 * Die Methode berechneGewerbesteuer berechnet die Steuer.
+	 * Die Methode <b>berechneGewerbesteuer</b> berechnet die Gewerbesteuerauf
+	 * den Gewinn der Klasse Personengesellschaft und gibt das Nettoeinkommen
+	 * zurück.
 	 * 
-	 * @return
+	 * @return <b>steuer</b> gibt das Nettoeinkommen zurück.
 	 */
 
 	public int berechneGewerbesteuer() {
@@ -67,7 +58,13 @@ public class Personengesellschaft extends Unternehmen implements Einkommenssteue
 		return steuer;
 	}
 
-	@Override
+	/**
+	 * Die Methode <b>berechneEinkommensteuer</b> berechnet die Einkommensteuer
+	 * auf den Gewinn der Klasse Personengesellschaft.
+	 * 
+	 * @return gibt die Einkommensteuer zurück.
+	 */
+
 	public int berechneEinkommenssteuer() {
 		return Einkommensteuer.berechneEinkommensSteuer(this.getGewinn());
 	}

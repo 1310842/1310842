@@ -31,8 +31,8 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 	 * 
 	 * @param <b>superheld</b>
 	 *            übergibt den Namen des Superhelden.
-	 * @return gibt den <b>name</b> des verlorenen bzw. gewonnen Superhelden
-	 *         zurück.
+	 * @return <b>name</b> gibt den Namen des verlorenen bzw. gewonnen
+	 *         Superhelden zurück.
 	 */
 
 	public String kaempfen(Superheld superheld) {
@@ -65,5 +65,4 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 	public int berechneEinkommenssteuer() {
 		return Einkommensteuer.berechneEinkommensSteuer(this.getEinkommen());
 	}
-
 }

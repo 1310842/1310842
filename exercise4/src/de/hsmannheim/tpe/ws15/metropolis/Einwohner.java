@@ -8,6 +8,7 @@ package de.hsmannheim.tpe.ws15.metropolis;
  * @author Car, Isra
  * @author Celik, Kuebra
  */
+
 public abstract class Einwohner {
 
 	/**
@@ -19,7 +20,7 @@ public abstract class Einwohner {
 
 	/**
 	 * Instanziierung der Klasse Einwohner als Konstruktor und definiert die
-	 * Anfangswerte für die Objekte Mensch und Mutant
+	 * Anfangswerte für die Objekte Mensch und Mutant.
 	 * 
 	 */
 
@@ -30,7 +31,10 @@ public abstract class Einwohner {
 
 	/**
 	 * Die Methode getName gibt <b>name</b> zurück und macht es zugreifbar.
+	 * 
+	 * @return <b>name</b> gibt den Namen zurück.
 	 */
+
 	public String getName() {
 		return name;
 	}
@@ -38,7 +42,10 @@ public abstract class Einwohner {
 	/**
 	 * Die Methode getEinkommen gibt <b>einkommen</b> zurück und macht es
 	 * zugreifbar.
+	 * 
+	 * @return <b>einkommen</b> gibt das Einkommen zurück.
 	 */
+
 	public int getEinkommen() {
 		return einkommen;
 	}
@@ -46,6 +53,7 @@ public abstract class Einwohner {
 	/**
 	 * Die Methode setName überschreibt das Attribute <b>name</b>.
 	 */
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -53,6 +61,7 @@ public abstract class Einwohner {
 	/**
 	 * Die Methode setEinkommen überschreibt das Attribute <b>einkommen</b>.
 	 */
+
 	public void setEinkommen(int einkommen) {
 		this.einkommen = einkommen;
 	}

@@ -65,7 +65,7 @@ public class Superheld extends Mutant {
 	/**
 	 * Die Methode getList gibt die <b>list</b> zurück und macht es zugreifbar.
 	 * 
-	 * @return
+	 * @return <b>list</b> gibt das Attribut <b>list</b> zurück.
 	 */
 
 	public ArrayList<String> getList() {

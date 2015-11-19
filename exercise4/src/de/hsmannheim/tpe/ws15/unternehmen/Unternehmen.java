@@ -2,8 +2,8 @@ package de.hsmannheim.tpe.ws15.unternehmen;
 
 /**
  * Die Klasse Unternehmen ist die Oberklasse von Kapitalgesellschaft und
- * Personalgesellschaft. Dieser beinhaltet den Name des Unternehmens und den
- * Gewinn.
+ * Personalgesellschaft. Sie beinhaltet die grundsätzliche Eigenschaften eines
+ * Unternehmens.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -13,17 +13,19 @@ package de.hsmannheim.tpe.ws15.unternehmen;
 public class Unternehmen {
 
 	/**
-	 * Attribute.
+	 * Deklaration der Attribute.
 	 */
 
 	private String unternehmenName;
 	private int gewinn;
 
 	/**
-	 * Konstruktor.
+	 * Instanziierung der Klasse Unternehmen als Konstruktor.
 	 * 
-	 * @param unternehmenName
-	 * @param gewinn
+	 * @param <b>unternehmenName</b>
+	 *            wird übergeben.
+	 * @param <b>gewinn</b>
+	 *            wird übergeben.
 	 */
 
 	public Unternehmen(String unternehmenName, int gewinn) {
@@ -33,19 +35,19 @@ public class Unternehmen {
 	}
 
 	/**
-	 * Die Methode toString
+	 * Die Methode <b>toString</b> gibt Information über die Klasse Unternehmen.
 	 */
 
 	@Override
 	public String toString() {
-		return (this.getClass().getSimpleName() +" " + this.getUnternehmenName() + ", Gewinn: "
-				+ this.getGewinn());
+		return (this.getClass().getSimpleName() + " " + this.getUnternehmenName() + ", Gewinn: " + this.getGewinn());
 	}
 
 	/**
-	 * Getmethoden.
+	 * Die Methode <b>getUnternehmenName</b> gibt das Attribut
+	 * <b>getUnternehmenName</b> zurück und macht es zugreifbar.
 	 * 
-	 * @return
+	 * @return gibt <b>getUnternehmenName</b> zurück.
 	 */
 
 	public String getUnternehmenName() {
@@ -53,33 +55,13 @@ public class Unternehmen {
 	}
 
 	/**
-	 * Setmethode
+	 * Die Methode <b>getGewinn</b> gibt das Attribut <b>gewinn</b> zurück und
+	 * macht sie zugreifbar.
 	 * 
-	 * @param unternehmenName
-	 */
-
-	private void setUnternehmenName(String unternehmenName) {
-		this.unternehmenName = unternehmenName;
-	}
-
-	/**
-	 * Getmethode
-	 * 
-	 * @return
+	 * @return gibt <b>gewinn</b> zurück.
 	 */
 
 	public int getGewinn() {
 		return gewinn;
 	}
-
-	/**
-	 * Setmethode
-	 * 
-	 * @param gewinn
-	 */
-
-	private void setGewinn(int gewinn) {
-		this.gewinn = gewinn;
-	}
-
 }
