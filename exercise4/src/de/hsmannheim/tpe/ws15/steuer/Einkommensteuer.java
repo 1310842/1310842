@@ -1,5 +1,7 @@
 package de.hsmannheim.tpe.ws15.steuer;
 
+import de.hsmannheim.tpe.ws15.staat.Finanzamt;
+
 /**
  * Die abstrakte Klasse Einkommensteuer stellt die Berechnung der
  * Einkommensteuer da.
@@ -8,7 +10,7 @@ package de.hsmannheim.tpe.ws15.steuer;
  * @author Celik, Kuebra
  */
 
-public abstract class Einkommensteuer {
+public abstract class Einkommensteuer extends Finanzamt{
 
 	/**
 	 * Die Methode <b>berechneEinkommensSteuer</b> berechnet die Einkommensteuer.
