@@ -27,12 +27,11 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 	}
 
 	/**
-	 * Die Methode kaempfen prüft ob der Schurke oder Superheld gewonnen hat.
+	 * Die Methode simuliert einen Kamp zwischen Schurke und Superheld.
 	 * 
-	 * @param <b>superheld</b>
-	 *            übergibt den Namen des Superhelden.
-	 * @return <b>name</b> gibt den Namen des verlorenen bzw. gewonnen
-	 *         Superhelden zurück.
+	 * @param <b>superheld</b> mit dem der Schurke kämpfen soll
+	 * 
+	 * @return <b>name</b> verliert/gewinnt den Kampf gegen <b>name des Gegners</b>
 	 */
 
 	public String kaempfen(Superheld superheld) {
@@ -45,10 +44,9 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 	}
 
 	/**
-	 * Die Methode <b>getSchwaeche</b> gibt <b>schwaeche</b> zurück und macht es
-	 * zugreifbar.
+	 * Die Methode <b>getSchwaeche</b> gibt die <b>schwaeche</b> des Schurkens zurück
 	 * 
-	 * @return gibt <b>name</b> zurück.
+	 * @return gibt <b>schwäche</b> zurück.
 	 */
 
 	public String getSchwaeche() {
@@ -58,7 +56,7 @@ public class Schurke extends Mutant implements EinkommenssteuerI {
 	/**
 	 * Die Methode <b>berechneEinkommenssteuer</b> holt sich das Einkommen vom
 	 * Objekt des Typs Schurke, berechnet die Einkommensteuer auf das Einkommen
-	 * und gibt das Nettoeinkommen zurück.
+	 * und gibt die Steuer zurück die abgeführt werden muss.
 	 */
 
 	@Override

@@ -1,7 +1,8 @@
 package de.hsmannheim.tpe.ws15.steuer;
 
 /**
- * Die Klasse KoerperschaftssteuerI stellt ein Interface da.
+ * 
+ * Interface KoerperschaftssteuerI
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -11,7 +12,7 @@ package de.hsmannheim.tpe.ws15.steuer;
 public interface KoerperschaftssteuerI {
 
 	/**
-	 * Deklaration der Koerperschaftssteuer.
+	 * Vordefinierte Steuersatz für Körperschaftssteuer.
 	 */
 
 	public static final double LINEARKOERPERSTEUER = 0.15;

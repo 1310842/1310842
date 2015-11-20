@@ -1,5 +1,7 @@
 package de.hsmannheim.tpe.ws15.unternehmen;
 
+import de.hsmannheim.tpe.ws15.steuer.GewerbesteuerI;
+
 /**
  * Die Klasse Unternehmen ist die Oberklasse von Kapitalgesellschaft und
  * Personalgesellschaft. Sie beinhaltet die grundsätzliche Eigenschaften eines
@@ -10,7 +12,7 @@ package de.hsmannheim.tpe.ws15.unternehmen;
  *
  */
 
-public class Unternehmen {
+public class Unternehmen implements GewerbesteuerI {
 
 	/**
 	 * Deklaration der Attribute.
@@ -20,12 +22,10 @@ public class Unternehmen {
 	private int gewinn;
 
 	/**
-	 * Instanziierung der Klasse Unternehmen als Konstruktor.
+	 * Instanziierung der Klasse Unternehmen mit den übergebenen parametern
 	 * 
-	 * @param <b>unternehmenName</b>
-	 *            wird übergeben.
-	 * @param <b>gewinn</b>
-	 *            wird übergeben.
+	 * @param <b>unternehmenName</b> des Unternehmens
+	 * @param <b>gewinn</b> des Unternehmens
 	 */
 
 	public Unternehmen(String unternehmenName, int gewinn) {
@@ -35,7 +35,9 @@ public class Unternehmen {
 	}
 
 	/**
-	 * Die Methode <b>toString</b> gibt Information über die Klasse Unternehmen.
+	 * Die Methode <b>toString</b> gibt Information über das aktuelle Unternehmen.
+	 * 
+	 * @return "(Unternehmen) Unternehmensname, Gewinn: <b>Gewinn der Unternehmen</b>
 	 */
 
 	@Override
@@ -44,8 +46,7 @@ public class Unternehmen {
 	}
 
 	/**
-	 * Die Methode <b>getUnternehmenName</b> gibt das Attribut
-	 * <b>getUnternehmenName</b> zurück und macht es zugreifbar.
+	 * Die Methode <b>getUnternehmenName</b> gibt das Unternehmensname zurück
 	 * 
 	 * @return gibt <b>getUnternehmenName</b> zurück.
 	 */
@@ -55,13 +56,24 @@ public class Unternehmen {
 	}
 
 	/**
-	 * Die Methode <b>getGewinn</b> gibt das Attribut <b>gewinn</b> zurück und
-	 * macht sie zugreifbar.
+	 * Die Methode <b>getGewinn</b> gibt das Gewinn der Unternehmen zurück
 	 * 
 	 * @return gibt <b>gewinn</b> zurück.
 	 */
 
 	public int getGewinn() {
 		return gewinn;
+	}
+
+	/**
+	 * Die Methode <b>berechneGewerbesteuer</b> berechnet die Gewerbesteuer auf
+	 * den Gewinn der Klasse Kapitalgesellschaft.
+	 * 
+	 * @return <b>steuer</b> gibt den Nettogewinn zurück.
+	 */
+    @Override
+	public int berechneGewerbesteuer() {
+		int steuer = this.getGewinn() * GEWERBESTEUER / 100;
+		return steuer;
 	}
 }

@@ -1,6 +1,15 @@
 package de.hsmannheim.tpe.ws15.staat;
 
+/**
+ * Die Klasse <b>Finanzamt</b> erhält alle Steuerpflichtigen Zahler
+ * 
+ * @author Car, Isra
+ * @author Celik, Kuebra
+ */
+
+
 import java.util.ArrayList;
+
 
 /**
  * Die Klasse Finanzamt berechnet die Gesamtsteuer für Metropolis.
@@ -26,9 +35,9 @@ public abstract class Finanzamt {
 
 	/**
 	 * Die Methode <b>berechneGesamtsteuer</b> berechnet die Gesamtsteuer für
-	 * alle Steuerpflichtigen Elemente.
+	 * alle Steuerpflichtigen Objekte
 	 * 
-	 * @return <b>gesamtsteuer</b> gibt die Gesamtsteuer zurück.
+	 * @return gibt die <b>gesamtsteuer</b> zurück.
 	 */
 
 	public static int berechneGesamtsteuer() {
@@ -60,11 +69,10 @@ public abstract class Finanzamt {
 	}
 
 	/**
-	 * Die statische Methode <b>anmelden</b> fügt das Objekt vom Typ Schurke in
-	 * die Arraylist <b>schurke</b>.
+	 * Die Methode <b>anmelden</b> fügt das Objekt vom Typ Schurke in
+	 * die Steuerzahler Liste ein.
 	 * 
-	 * @param übergibt
-	 *            das Objekt <b>schurke</b> in die Arrayliste <b>schurke</b>.
+	 *  @param  Schurke der eingefügt werden soll
 	 */
 
 	public static void anmelden(Schurke schurke) {
@@ -72,11 +80,10 @@ public abstract class Finanzamt {
 	}
 
 	/**
-	 * Die statische Methode <b>anmelden</b> fügt das Objekt vom Typ Syndikat in
-	 * die Arraylist <b>syndikat</b>.
+	 * Die Methode <b>anmelden</b> fügt das Objekt vom Typ Syndikat in
+	 * die Steuerzahler Liste ein.
 	 * 
-	 * @param übergibt
-	 *            das Objekt <b>syn</b> in die Arrayliste <b>syndikat</b>.
+	 *  @param  Syndikat der eingefügt werden soll
 	 */
 
 	public static void anmelden(Syndikat syn) {
@@ -84,12 +91,10 @@ public abstract class Finanzamt {
 	}
 
 	/**
-	 * Die statische Methode <b>anmelden</b> fügt das Objekt vom Typ
-	 * Personengesellschaft in die Arraylist <b>personengesellschaft</b>.
+	 * Die Methode <b>anmelden</b> fügt das Objekt vom Typ
+	 * Personengesellschaft in die Liste der Steuerzahler ein.
 	 * 
-	 * @param übergibt
-	 *            das Objekt <b>pers</b> in die Arrayliste
-	 *            <b>personengesellschaft</b>.
+	 *  @param  Personengesellschaft der eingefügt werden soll
 	 */
 
 	public static void anmelden(Personengesellschaft pers) {
@@ -97,11 +102,10 @@ public abstract class Finanzamt {
 	}
 
 	/**
-	 * Die statische Methode <b>anmelden</b> fügt das Objekt vom Typ Buerger in
-	 * die Arraylist <b>buerger</b>.
+	 * Die Methode <b>anmelden</b> fügt das Objekt vom Typ Buerger in
+	 * die Liste der Steuerzahler ein.
 	 * 
-	 * @param übergibt
-	 *            das Objekt <b>buerg</b> in die Arrayliste <b>buerger</b>.
+	 * @param Bürger der eingefügt werden soll
 	 */
 
 	public static void anmelden(Buerger buerg) {
@@ -109,12 +113,10 @@ public abstract class Finanzamt {
 	}
 
 	/**
-	 * Die statische Methode <b>anmelden</b> fügt das Objekt vom Typ
-	 * Kapitalgesellschaft in die Arraylist <b>kapitalgesellschaft</b>.
+	 * Die Methode <b>anmelden</b> fügt das Objekt vom Typ
+	 * Kapitalgesellschaft in die Liste der Steuerzahler ein.
 	 * 
-	 * @param übergibt
-	 *            das Objekt <b>kap</b> in die Arrayliste
-	 *            <b>kapitalgesellschaft</b>.
+	 * @param Kapitalgesellschaft der eingefügt werden soll
 	 */
 
 	public static void anmelden(Kapitalgesellschaft kap) {

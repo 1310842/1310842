@@ -19,7 +19,7 @@ public class Superheld extends Mutant {
 	private ArrayList<String> list = new ArrayList<>();
 
 	/**
-	 * Instanziierung der Klasse Superheld als Konstruktor.
+	 * Instanziierung der Klasse Superheld.
 	 * 
 	 * @param übergibt
 	 *            den <b>name</b> des Objekts.
@@ -34,12 +34,11 @@ public class Superheld extends Mutant {
 	}
 
 	/**
-	 * Die Methode <b>kaempfe</b> überprüft ob Superheld den Schurken besiegen
-	 * kann.
+	 * Die Methode <b>kaempfe</b> simuliert einen Kampf zwischen Superheld und Schurke
 	 * 
-	 * @param <b>schurke</b>
-	 *            übergibt den Namen des Schurken.
-	 * @return gibt entweder <b>true</b> oder <b>false</b> zurück.
+	 * @param <b>schurke</b> mit dem der Superheld kämpfen soll
+	 * 
+	 * @return gibt <b>true</b>(Superheld hat gewonnen) oder <b>false</b>(Superheld hat verloren) zurück.
 	 */
 
 	public boolean kaempfen(Schurke schurke) {
@@ -51,11 +50,9 @@ public class Superheld extends Mutant {
 	}
 
 	/**
-	 * Die Methode <b>addSuperkraft</b> fügt die <b>superkraft</b> in die
-	 * Arraylist <b>list</b> hinzu.
+	 * Die Methode <b>addSuperkraft</b> fügt einen neuen Superkraft in die Liste ein
 	 * 
-	 * @param übergibt
-	 *            die <b>superkraft</b> des Superhelden.
+	 * @param <b>superkraft</b> der eingefügt werden soll
 	 */
 
 	public void addSuperkraft(String superkraft) {
@@ -63,9 +60,9 @@ public class Superheld extends Mutant {
 	}
 
 	/**
-	 * Die Methode getList gibt die <b>list</b> zurück und macht es zugreifbar.
+	 * Die Methode getList gibt die <b>list</b> die mit Superkräft des Superheldens befüllt ist zurück
 	 * 
-	 * @return <b>list</b> gibt das Attribut <b>list</b> zurück.
+	 * @return gibt <b>list</b> mit Superkräfte zurück.
 	 */
 
 	public ArrayList<String> getList() {

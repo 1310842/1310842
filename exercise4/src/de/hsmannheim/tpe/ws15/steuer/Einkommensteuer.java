@@ -1,7 +1,7 @@
 package de.hsmannheim.tpe.ws15.steuer;
 
 /**
- * Die abstracte Klasse Einkommensteuer stellt die Berechnung der
+ * Die abstrakte Klasse Einkommensteuer stellt die Berechnung der
  * Einkommensteuer da.
  * 
  * @author Car, Isra
@@ -14,10 +14,9 @@ public abstract class Einkommensteuer {
 	 * Die Methode <b>berechneEinkommensSteuer</b> berechnet die Einkommensteuer.
 	 * 
 	 * 
-	 * @param <b>einkommen</b>
-	 *            übergibt den Einkommen des Objekts.
+	 * @param <b>einkommen</b> des Einwohners
 	 * 
-	 * @return <b>steuer</b> gibt die Nettosteuer zurück.
+	 * @return gibt die <b>steuer</b> zurück die abgeführt werden muss
 	 */
 
 	public static int berechneEinkommensSteuer(int einkommen) {

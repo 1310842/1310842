@@ -4,8 +4,7 @@ import de.hsmannheim.tpe.ws15.metropolis.Einwohner;
 
 /**
  * Die abstrakte Klasse <b>Mensch</b> ist die Unterklasse von <b>Einwohner</b>
- * und die Oberklasse von <b>Buerger</b> und <b>Richter</b>. Sie definiert
- * zusätzliche Eigenschaften für all ihre Unterklassen.
+ * und die Oberklasse von <b>Buerger</b> und <b>Richter</b>.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -36,8 +35,7 @@ public abstract class Mensch extends Einwohner {
 	}
 
 	/**
-	 * Die Methode <b>getAlter</b> gibt <b>alter</b> zurück und macht es
-	 * zugreifbar.
+	 * Die Methode <b>getAlter</b> gibt <b>alter</b> zurück
 	 * 
 	 * @return gibt <b>alter</b> zurück.
 	 */

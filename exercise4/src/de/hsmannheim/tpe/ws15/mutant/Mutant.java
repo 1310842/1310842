@@ -17,10 +17,10 @@ public abstract class Mutant extends Einwohner {
 	 * Deklaration des Attributs <b>mutation</b>
 	 */
 
-	protected String mutation;
+	private String mutation;
 
 	/**
-	 * Instanziierung der Klasse Mutant als Konstruktor.
+	 * Instanziierung der Klasse Mutant.
 	 * 
 	 * @param <b>name</b>
 	 *            übergibt den Namen des Objekts.
@@ -37,8 +37,7 @@ public abstract class Mutant extends Einwohner {
 	}
 
 	/**
-	 * Die Methode <b>getMutation</b> gibt <b>mutation</b> zurück und macht es
-	 * zugreifbar.
+	 * Die Methode <b>getMutation</b> gibt <b>mutation</b> zurück
 	 * 
 	 * @return gibt <b>mutation</b> zurück.
 	 */
@@ -48,10 +47,9 @@ public abstract class Mutant extends Einwohner {
 	}
 
 	/**
-	 * Die Methode <b>setMutation</b> überschreibt das Attribut <b>mutation</b>.
+	 * Die Methode ändert die <b>mutation</b> der Mutanten um
 	 * 
-	 * @param <b>mutation</b>
-	 *            übergibt die Mutation des Objekts.
+	 * @param <b>mutation</b> den der Mutant nun haben soll
 	 */
 	
 	public void setMutation(String mutation) {

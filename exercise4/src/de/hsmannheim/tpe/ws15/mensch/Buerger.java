@@ -18,14 +18,11 @@ public class Buerger extends Mensch implements EinkommenssteuerI {
 	 * Instanziierung des Buergers als Konstruktor. Die Übergabeparameter
 	 * definieren die Anfangswerte für das Objekt Buerger. Bei jedem Aufruf des
 	 * Konstruktors wird automatisch die Methode anmelden in der Klasse
-	 * Finanzamt aufgerufen. Die Methode anmelden verwendet das Objekt weiter.
+	 * Finanzamt aufgerufen.
 	 * 
-	 * @param <b>name</b>
-	 *            übergibt den Namen zur Benennung des Objekts.
-	 * @param <b>einkommen</b>
-	 *            übergibt das Einkommen des Objekts.
-	 * @param <b>alter</b>
-	 *            übergibt das Alter des Objekts.
+	 * @param <b>name</b> übergibt den Namen zur Benennung des Objekts.
+	 * @param <b>einkommen</b> übergibt das Einkommen des Objekts.
+	 * @param <b>alter</b> übergibt das Alter des Objekts.
 	 */
 
 	public Buerger(String name, int einkommen, int alter) {
@@ -34,21 +31,24 @@ public class Buerger extends Mensch implements EinkommenssteuerI {
 	}
 
 	/**
-	 * Die Methode berechneEinkommenssteuer holt das Einkommen des Objekts
-	 * Buerger und verwendet die Methode <b>berechneEinkommensSteuer</b> der
-	 * Klasse Einkommensteuer und gibt das Nettoeinkommen des Objekts Buerger
-	 * zurück.
+	 * 
+	 * Die Methode berechnet die Einkommensteuer des Bürgers in Verbindung mit
+	 * dem Einkommen des Bürgers
+	 * 
+	 * @return einkommensteuer des Bürgers
 	 */
 
 	@Override
 	public int berechneEinkommenssteuer() {
-		return (Einkommensteuer.berechneEinkommensSteuer(this.einkommen));
+		return (Einkommensteuer.berechneEinkommensSteuer(this.getEinkommen()));
 
 	}
 
 	/**
 	 * Die Methode toString gibt Information über die Identität und Alter des
 	 * Objekts Buerger.
+	 * 
+	 * @return <b>Buergername</b> ist <b>alter</b> Jahre alt
 	 */
 
 	@Override

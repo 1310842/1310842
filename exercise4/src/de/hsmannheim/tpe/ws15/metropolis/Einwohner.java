@@ -15,8 +15,8 @@ public abstract class Einwohner {
 	 * Deklaration der Attribute name und einkommen.
 	 */
 
-	protected String name;
-	protected int einkommen;
+	private String name;
+	private int einkommen;
 
 	/**
 	 * Instanziierung der Klasse Einwohner als Konstruktor und definiert die
@@ -30,7 +30,7 @@ public abstract class Einwohner {
 	}
 
 	/**
-	 * Die Methode getName gibt <b>name</b> zurück und macht es zugreifbar.
+	 * Die Methode getName gibt <b>name</b> des Einwohners zurück.
 	 * 
 	 * @return <b>name</b> gibt den Namen zurück.
 	 */
@@ -40,8 +40,7 @@ public abstract class Einwohner {
 	}
 
 	/**
-	 * Die Methode getEinkommen gibt <b>einkommen</b> zurück und macht es
-	 * zugreifbar.
+	 * Die Methode getEinkommen gibt <b>einkommen</b> des Einwohners zurück
 	 * 
 	 * @return <b>einkommen</b> gibt das Einkommen zurück.
 	 */
@@ -51,7 +50,9 @@ public abstract class Einwohner {
 	}
 
 	/**
-	 * Die Methode setName überschreibt das Attribute <b>name</b>.
+	 * Die Methode ändert Name des Einwohners um
+	 * 
+	 * @param <b>name</b> die mit dem alten ersetzt werden soll
 	 */
 
 	public void setName(String name) {
@@ -59,7 +60,9 @@ public abstract class Einwohner {
 	}
 
 	/**
-	 * Die Methode setEinkommen überschreibt das Attribute <b>einkommen</b>.
+	 * Die Methode ändert das Einkommen des Einwohners um
+	 * 
+	 * @param <b>einkommen</b> den der Einwohner nun haben soll
 	 */
 
 	public void setEinkommen(int einkommen) {

@@ -29,7 +29,7 @@ public class Richter extends Mensch {
 	 *            <b>alter</b> zur Festlegung des Alters.
 	 * @param übergibt
 	 *            <b>korrupt</b> und gibt an, ob die Korruption des Objekts
-	 *            <b>true</b> oder <b>false</b> ist.
+	 *            <b>true</b>(für korrupt) oder <b>false</b>(nicht korrupt) ist.
 	 * 
 	 */
 
@@ -41,7 +41,7 @@ public class Richter extends Mensch {
 
 	/**
 	 * Die Methode verurteilen überprüft die Korruption des Objekts und gibt
-	 * entweder den Wert <b>true</b> oder <b>false</b> zurück.
+	 * entweder den Wert <b>true</b>(Schurke wird freigesprochen) oder <b>false</b>(Schurke wird zur Haft verurteilt) zurück.
 	 * 
 	 * @return gibt <b>true</b> oder <b>false</b> zurück.
 	 */
