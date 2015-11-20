@@ -46,9 +46,9 @@ public class Personengesellschaft extends Unternehmen implements Einkommenssteue
 	public int berechneGewerbesteuer() {
 
 		int steuer = this.getGewinn() * GEWERBESTEUER / 100;
-		if (steuer >= 800) {
+		if (steuer >= ERMAEßIGUNG) {
 
-			steuer = steuer - 800;
+			steuer = steuer - ERMAEßIGUNG;
 		}
 		return steuer;
 	}
