@@ -23,7 +23,8 @@ public class Syndikat {
 	 * Instanzierung eines Syndikats mit Name. Syndikat wird automatisch an das
 	 * Finanzamt gemeldet
 	 * 
-	 * @param <b>syndikatName</b> Name des Syndikats
+	 * @param <b>syndikatName</b>
+	 *            Name des Syndikats
 	 * 
 	 */
 	public Syndikat(String syndikatName) {
@@ -33,7 +34,8 @@ public class Syndikat {
 	}
 
 	/**
-	 * Gibt die Liste der Schurken des Syndikats zurück
+	 * Die Methode <b>getSyndikt</b> gibt <b>syndikt</b> zurück und macht es
+	 * zugreifbar.
 	 * 
 	 * @return gibt die <b>syndikat</b> Liste zurück
 	 */
@@ -46,14 +48,15 @@ public class Syndikat {
 	 * Durch die Methode setSyndikat wird die aktuelle Liste mit dem übergebenen
 	 * Liste ersetzt
 	 * 
-	 * @param <b>syndikat</b> Liste die mit dem aktuellen ersetzt werden soll
+	 * @param <b>syndikat</b>
+	 *            Liste die mit dem aktuellen ersetzt werden soll
 	 */
 	private void setSyndikat(ArrayList<Schurke> syndikat) {
 		this.syndikat = syndikat;
 	}
 
 	/**
-	 * Die Methode addSchurke fügt ein Schurke in das Syndikat
+	 * Die Methode <b>addSchurke</b> fügt ein Schurke in das Syndikat
 	 * 
 	 * @param schurke
 	 *            der eingefügt werden soll
@@ -65,8 +68,8 @@ public class Syndikat {
 	}
 
 	/**
-	 * Die Methode getSyndikatName macht das Attribute syndikatName für äußere
-	 * Einflüsse zugreifbar.
+	 * Die Methode <b>getSyndikatName</b> gibt <b>syndikatName </b> zurück und
+	 * macht es zugreifbar.
 	 * 
 	 * @return gibt syndikatName zurück
 	 */
