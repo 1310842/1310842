@@ -24,7 +24,7 @@ public abstract class Einwohner {
 	 * 
 	 */
 
-	public Einwohner(String name, int einkommen) {
+	protected Einwohner(String name, int einkommen) {
 		this.name = name;
 		this.einkommen = einkommen;
 	}
