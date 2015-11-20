@@ -29,7 +29,7 @@ public abstract class Mensch extends Einwohner {
 	 *            übergibt das Alter des Objekts.
 	 */
 
-	public Mensch(String name, int einkommen, int alter) {
+	protected Mensch(String name, int einkommen, int alter) {
 		super(name, einkommen);
 		this.alter = alter;
 	}
