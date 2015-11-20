@@ -14,7 +14,7 @@ import de.hsmannheim.tpe.ws15.steuer.KoerperschaftssteuerI;
  *
  */
 
-public class Syndikat {
+public class Syndikat implements KoerperschaftssteuerI{
 
 	private String syndikatName;
 	private ArrayList<Schurke> syndikat = new ArrayList<Schurke>();
@@ -24,7 +24,7 @@ public class Syndikat {
 	 * Finanzamt gemeldet
 	 * 
 	 * @param <b>syndikatName</b>
-	 *            Name des Syndikats
+	 *            Name des Syndikatss
 	 * 
 	 */
 	public Syndikat(String syndikatName) {
@@ -105,7 +105,7 @@ public class Syndikat {
 
 		}
 
-		einkommen = (int) (einkommen * KoerperschaftssteuerI.LINEARKOERPERSTEUER);
+		einkommen = (int) (einkommen * LINEARKOERPERSTEUER);
 
 		return einkommen;
 
