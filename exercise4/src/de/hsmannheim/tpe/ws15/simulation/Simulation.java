@@ -27,7 +27,7 @@ public class Simulation {
 
 		Syndikat syn1 = new Syndikat("Fantastic 1");
 		Syndikat syn2 = new Syndikat("Fantastic 2");
-
+		Syndikat syn3 = new Syndikat("Syndikat des Superschurken");
 		/**
 		 * Instanziierung der Objekte vom Typ Schurke.
 		 */
@@ -74,8 +74,8 @@ public class Simulation {
 		 * <b>addSchurke</b> vom Objekt <b>syn2</b> weitergegeben.
 		 */
 
-		syn2.addSchurke(s1);
-		syn2.addSchurke(s2);
+		syn3.addSchurke(s1);
+		syn3.addSchurke(s2);
 
 		/**
 		 * Konsolenausgabe über den Zusammenschluss von Schurke s1 und Schurke
@@ -84,9 +84,10 @@ public class Simulation {
 
 		System.out.println(
 				s1.getName() + " " + "und" + " " + s2.getName() + "haben sich in ein Syndikat zusammengeschlossen.");
-		System.out.println(syn2.toString());
+		System.out.println(syn3.toString());
 		System.out.println("Gesamtssteuer: " + Finanzamt.berechneGesamtsteuer());
 
+		System.out.println("Schurkii wurde eingefügt.");
 		Schurke schurke123 = new Schurke("Schurkii", 2000, "Feuer");
 		System.out.println("Gesamtssteuer: " + Finanzamt.berechneGesamtsteuer());
 
