@@ -29,8 +29,8 @@ public abstract class Mutant extends Einwohner {
 	 * @param <b>mutation</b>
 	 *            übergibt die Mutation des Objekts.
 	 */
-	
-	public Mutant(String name, int einkommen, String mutation) {
+
+	protected Mutant(String name, int einkommen, String mutation) {
 		super(name, einkommen);
 		this.mutation = mutation;
 
@@ -53,7 +53,7 @@ public abstract class Mutant extends Einwohner {
 	 * @param <b>mutation</b>
 	 *            übergibt die Mutation des Objekts.
 	 */
-	
+
 	public void setMutation(String mutation) {
 		this.mutation = mutation;
 	}
