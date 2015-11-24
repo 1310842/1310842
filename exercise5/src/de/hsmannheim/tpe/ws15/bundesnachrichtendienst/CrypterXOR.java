@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.verschluesselungsarten;
+package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 /**
  * Die Klasse CrypterXOR ...

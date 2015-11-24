@@ -1,5 +1,7 @@
 package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
+import de.hsmannheim.tpe.ws15.bundesnachrichtendienst.Crypter;
+
 /**
  * Die Factory-Klasse CrypterFactory stellt verschiedene durch die Methode
  * <b>createCrypter</b> Implementierungsmöglichkeiten zur Verschlüsselung dar.
@@ -12,14 +14,30 @@ package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 public class CrypterFactory {
 
 	public static enum CrypterVerfahren {
-		CAESAR, NULL, SUBSTITUTIOM, XOR
+		CAESAR, NULL, SUBSTITUTION, XOR
 	};
 
-	/**
-	 * Die Methode createCrypter stellt verschiedene Verschlüsselungsmethoden
-	 * bereit.
-	 * 
-	 * @return
-	 */
+	public CrypterFactory() {
+
+	}
+
+	public static Crypter createCrypter(final CrypterVerfahren crypterVerfahren) {
+		switch (crypterVerfahren)
+
+		{
+
+		case CAESAR:
+			return new CrypterCaesar();
+		case NULL:
+			return new CrypterNull();
+		case SUBSTITUTION:
+			return new CrypterNull();
+		case XOR:
+			return new CrypterNull();
+		default:
+			throw new IllegalArgumentException("Existiert  nicht.");
+		}
+
+	}
 
 }

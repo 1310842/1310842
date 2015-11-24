@@ -1,6 +1,4 @@
-package de.hsmannheim.tpe.ws15.verschluesselungsarten;
-
-import de.hsmannheim.tpe.ws15.bundesnachrichtendienst.Crypter;
+package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 /**
  * Die Klasse CrypterNull
