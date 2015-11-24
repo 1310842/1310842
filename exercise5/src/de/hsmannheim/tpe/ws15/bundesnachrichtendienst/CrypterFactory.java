@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.factory;
+package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 /**
  * Die Factory-Klasse CrypterFactory stellt verschiedene durch die Methode
@@ -11,16 +11,15 @@ package de.hsmannheim.tpe.ws15.factory;
 
 public class CrypterFactory {
 
+	public static enum CrypterVerfahren {
+		CAESAR, NULL, SUBSTITUTIOM, XOR
+	};
+
 	/**
 	 * Die Methode createCrypter stellt verschiedene Verschlüsselungsmethoden
 	 * bereit.
 	 * 
 	 * @return
 	 */
-
-	public int createCrypter() {
-		return 0;
-
-	}
 
 }

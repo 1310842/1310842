@@ -1,4 +1,4 @@
-package exercise5;
+package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 /**
  * Grundlegendes Interface, um Verschlüsselung durchzuführen. Mit Hilfe dieses

@@ -1,6 +1,6 @@
 package de.hsmannheim.tpe.ws15.verschluesselungsarten;
 
-import exercise5.Crypter;
+import de.hsmannheim.tpe.ws15.bundesnachrichtendienst.Crypter;
 
 /**
  * Die Klasse CrypterNull
