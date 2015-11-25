@@ -9,4 +9,8 @@ package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 public class CrypterSubstitution implements Crypter {
 
+	CrypterSubstitution() {
+		super();
+		
+	}
 }

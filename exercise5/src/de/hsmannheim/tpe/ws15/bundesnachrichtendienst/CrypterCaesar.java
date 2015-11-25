@@ -9,4 +9,8 @@ package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 public class CrypterCaesar implements Crypter{
 
+	CrypterCaesar() {
+		super();
+		
+	}
 }
