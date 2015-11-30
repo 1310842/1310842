@@ -6,7 +6,8 @@ package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
  * @author Car, Isra
  * @author Celik, Kuebra
  */
-
+ //kasdfjalsö
+//
 public class CrypterSubstitution implements Crypter {
 
 	CrypterSubstitution() {
