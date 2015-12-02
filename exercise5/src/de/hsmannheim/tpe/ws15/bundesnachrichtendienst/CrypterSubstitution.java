@@ -24,10 +24,10 @@ public class CrypterSubstitution implements Crypter {
 		char[] keyArray = key.toCharArray();
 
 		ueberpruefeLaenge(keyArray);
-		differentLetter(keyArray);
+		differentLetter(key);
 		String encrypt = "";
 
-		for (int i = 0; i <= messageArray.length; i++) {
+		for (int i = 0; i < messageArray.length; i++) {
 			char buchstabe = messageArray[i];
 			int index = buchstabe - 'A';
 			encrypt += keyArray[index];
@@ -44,14 +44,12 @@ public class CrypterSubstitution implements Crypter {
 		char[] keyArray = key.toCharArray();
 
 		ueberpruefeLaenge(keyArray);
-		differentLetter(keyArray);
+		differentLetter(key);
 		String decrypt = "";
 
-		for (int i = 0; i <= cypherArray.length; i++) {
-			char buchstabe = cypherArray[i];
-			int index = buchstabe - 'A';
-			decrypt += keyArray[index];
-
+		for (int i = 0; i < cypherArray.length; i++) {
+			
+			decrypt += (char) (getIndex(cypherArray[i], keyArray) + 'A');
 		}
 
 		return decrypt;
@@ -64,12 +62,12 @@ public class CrypterSubstitution implements Crypter {
 		}
 	}
 
-	public void differentLetter(char[] letter) throws IllegalMessageException {
+	public void differentLetter(String key) throws IllegalMessageException {
 		boolean[] letterExist = new boolean[MAXLENGTH];
 
-		for (int i = 0; i <= letterExist.length; i++) {
-			int index = letter[i] - 'A';
-			if (letterExist[index] == true) {
+		for (int i = 0; i < letterExist.length; i++) {
+			int index = key.charAt(i) - 'A';
+			if (letterExist[index]) {
 				throw new IllegalMessageException("Buchstabe existiert bereits");
 			} else {
 
@@ -78,6 +76,16 @@ public class CrypterSubstitution implements Crypter {
 
 		}
 
+	}
+	
+	public int getIndex(char gesuchteChar, char [] key) {
+		for(int i = 0; i < key.length; i++) {
+			if(key[i] == gesuchteChar){
+				return i;
+			}
+		}
+		
+		return 0;
 	}
 
 }
