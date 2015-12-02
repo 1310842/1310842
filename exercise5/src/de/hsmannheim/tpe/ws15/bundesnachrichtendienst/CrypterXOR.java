@@ -9,8 +9,8 @@ package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 public class CrypterXOR implements Crypter {
 
-	private final static char[] ABC = { '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-			'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_' };
+	private final static char[] ALPHABET = { '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+			'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_' };
 
 	CrypterXOR() {
 		super();
@@ -20,26 +20,41 @@ public class CrypterXOR implements Crypter {
 	@Override
 	public String encrypt(String key, String message) throws IllegalKeyException, IllegalMessageException {
 
-		char[] keyArray = key.toCharArray();
 		char[] messageArray = message.toCharArray();
-		char[] ergebnisArray = null;
-
-		for () {
-			
-		}
+		char[] keyArray = key.toCharArray();
+		char[] tempArray = null;
+		int bit;
 		
+		tempArray = ueberpruefeLaenge(keyArray, messageArray).toCharArray();
+		
+
+		String encrypt = "";
+
+		for (int i = 0; i < key.length(); i++) {
+			bit = (i + 1) ^ getIndex(tempArray[i]);
+			encrypt += ALPHABET[bit];
+
+		}
 		return encrypt;
 
 	}
 
 	@Override
 	public String decrypt(String key, String cypherText) throws IllegalKeyException, IllegalMessageException {
-		return cypherText;
-
 		char[] keyArray = key.toCharArray();
-		char[] messageArray = cypherText.toCharArray();
-		char[] ergebnisArray = null;
+		char[] cypherArray = cypherText.toCharArray();
+		char[] tempArray = null;
+		int bit;
+		
+		String decrypt = "";
+		
+		tempArray = ueberpruefeLaenge(keyArray, cypherArray).toCharArray();
+		
+		for (int i = 0; i < cypherText.length(); i++) {
+			bit = (getIndex(tempArray[i])) ^ getIndex(cypherArray[i]);
+			decrypt += ALPHABET[bit];
 
+		}
 		return decrypt;
 
 	}
@@ -67,6 +82,16 @@ public class CrypterXOR implements Crypter {
 
 		return anpassen;
 
+	}
+
+	private int getIndex(char gesuchterChar) {
+		for (int i = 0; i < ALPHABET.length; i++) {
+			if (ALPHABET[i] == gesuchterChar) {
+				return i;
+			}
+
+		}
+		return 0;
 	}
 
 }
