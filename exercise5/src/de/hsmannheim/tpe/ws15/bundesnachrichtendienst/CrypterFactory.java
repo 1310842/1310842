@@ -31,9 +31,9 @@ public class CrypterFactory {
 		case NULL:
 			return new CrypterNull();
 		case SUBSTITUTION:
-			return new CrypterNull();
+			return new CrypterSubstitution();
 		case XOR:
-			return new CrypterNull();
+			return new CrypterXOR();
 		default:
 			throw new IllegalArgumentException("Existiert  nicht.");
 		}
