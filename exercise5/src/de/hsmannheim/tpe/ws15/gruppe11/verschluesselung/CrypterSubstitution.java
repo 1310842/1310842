@@ -1,6 +1,10 @@
-package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
+package de.hsmannheim.tpe.ws15.gruppe11.verschluesselung;
 
 import java.lang.reflect.Array;
+
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.Crypter;
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageException;
 
 /**
  * Die Klasse CrypterSubstitution ...
@@ -13,7 +17,7 @@ public class CrypterSubstitution implements Crypter {
 
 	public static final int MAXLENGTH = 26;
 
-	CrypterSubstitution() {
+	public CrypterSubstitution() {
 		super();
 	}
 

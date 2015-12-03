@@ -1,4 +1,8 @@
-package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
+package de.hsmannheim.tpe.ws15.gruppe11.verschluesselung;
+
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.Crypter;
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageException;
 
 /**
  * Die Klasse CrypterNull
@@ -10,7 +14,7 @@ package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
 
 public class CrypterNull implements Crypter {
 
-	CrypterNull() {
+	public CrypterNull() {
 		super();
 	}
 

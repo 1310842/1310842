@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
+package de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst;
 
 /**
  * Grundlegendes Interface, um Verschlüsselung durchzuführen. Mit Hilfe dieses

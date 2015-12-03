@@ -1,4 +1,8 @@
-package de.hsmannheim.tpe.ws15.bundesnachrichtendienst;
+package de.hsmannheim.tpe.ws15.gruppe11.verschluesselung;
+
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.Crypter;
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageException;
 
 /**
  * Die Klasse CrypterXOR ...
@@ -12,7 +16,7 @@ public class CrypterXOR implements Crypter {
 	private final static char[] ALPHABET = { '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
 			'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_' };
 
-	CrypterXOR() {
+	public CrypterXOR() {
 		super();
 
 	}
