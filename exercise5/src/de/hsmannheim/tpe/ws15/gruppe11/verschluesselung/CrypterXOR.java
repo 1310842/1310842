@@ -5,7 +5,9 @@ import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalKeyExcepti
 import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageException;
 
 /**
- * Die Klasse CrypterXOR ...
+ * Die Klasse CrypterXOR stellt eine Verschluesselungsmethode dar. In dieser
+ * werden die einzelnen Buchstaben einer Nachricht mit einem Buchstaben des
+ * <b>ALPHABET</b> verknuepft.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -21,6 +23,17 @@ public class CrypterXOR implements Crypter {
 
 	}
 
+	/**
+	 * Verschluesselt eine als Parameter uebergebene Nachricht mit dem
+	 * dazugehoerende Schluessel
+	 * 
+	 * @param key
+	 *            Schluessel für die Verschluesselung
+	 * @param message
+	 *            Nachricht die verschluesselt werden soll
+	 * @return gibt die verschlüsellte Nachricht zurück
+	 */
+
 	@Override
 	public String encrypt(String key, String message) throws IllegalKeyException, IllegalMessageException {
 
@@ -28,9 +41,8 @@ public class CrypterXOR implements Crypter {
 		char[] keyArray = key.toCharArray();
 		char[] tempArray = null;
 		int bit;
-		
+
 		tempArray = ueberpruefeLaenge(keyArray, messageArray).toCharArray();
-		
 
 		String encrypt = "";
 
@@ -43,17 +55,29 @@ public class CrypterXOR implements Crypter {
 
 	}
 
+	/**
+	 * Entschluesselt die uebergebene Nachricht mit dem dazugehoerende
+	 * Schluessel
+	 * 
+	 * @param key
+	 *            Schluessel der für die richtige Entschluesselung notwendig ist
+	 * @param cypherText
+	 *            Verschluesselte Nachricht, die entschluesselt werden soll
+	 * 
+	 * @return gibt die entschluesselte Nachricht zurück
+	 */
+
 	@Override
 	public String decrypt(String key, String cypherText) throws IllegalKeyException, IllegalMessageException {
 		char[] keyArray = key.toCharArray();
 		char[] cypherArray = cypherText.toCharArray();
 		char[] tempArray = null;
 		int bit;
-		
+
 		String decrypt = "";
-		
+
 		tempArray = ueberpruefeLaenge(keyArray, cypherArray).toCharArray();
-		
+
 		for (int i = 0; i < cypherText.length(); i++) {
 			bit = (getIndex(tempArray[i])) ^ getIndex(cypherArray[i]);
 			decrypt += ALPHABET[bit];
@@ -62,6 +86,19 @@ public class CrypterXOR implements Crypter {
 		return decrypt;
 
 	}
+
+	/**
+	 * Die Methode ueberpruefeLaenge kontrolliert die ob die Nachricht dieselbe
+	 * Laenge wie der Schluessel hat. Sollte es nicht der Fall sein, so wird es
+	 * solange lange wiederholt, bis die Nachricht die Laenge des Schluessels
+	 * hat.
+	 * 
+	 * @param keyArray
+	 *            Schluessel der angepasst werden soll
+	 * @param messageArray
+	 *            angepasste Nachricht
+	 * @return anpassen gibt Laenge zurück.
+	 */
 
 	private String ueberpruefeLaenge(char[] keyArray, char[] messageArray) {
 
@@ -87,6 +124,13 @@ public class CrypterXOR implements Crypter {
 		return anpassen;
 
 	}
+
+	/**
+	 * Die Methode getIndex gibt den gesuchten Buchstaben zurueck
+	 * 
+	 * @param gesuchterChar
+	 * @return i gibt den Buchstabe zurueck.
+	 */
 
 	private int getIndex(char gesuchterChar) {
 		for (int i = 0; i < ALPHABET.length; i++) {
