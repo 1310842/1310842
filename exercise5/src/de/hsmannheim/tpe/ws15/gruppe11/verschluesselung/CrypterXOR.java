@@ -15,131 +15,121 @@ import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageExc
 
 public class CrypterXOR implements Crypter {
 
-	private final static char[] ALPHABET = { '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-			'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_' };
+    private final static char[] ALPHABET = { '@', 'A', 'B', 'C', 'D', 'E', 'F',
+            'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
+            'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_' };
 
-	public CrypterXOR() {
-		super();
+    CrypterXOR() {
+        super();
 
-	}
+    }
 
-	/**
-	 * Verschluesselt eine als Parameter uebergebene Nachricht mit dem
-	 * dazugehoerende Schluessel
-	 * 
-	 * @param key
-	 *            Schluessel für die Verschluesselung
-	 * @param message
-	 *            Nachricht die verschluesselt werden soll
-	 * @return gibt die verschlüsellte Nachricht zurück
-	 */
+    /**
+     * Verschluesselt eine als Parameter uebergebene Nachricht mit dem
+     * dazugehoerende Schluessel
+     * 
+     * @param key
+     *            Schluessel für die Verschluesselung
+     * @param message
+     *            Nachricht die verschluesselt werden soll
+     * @return gibt die verschlüsellte Nachricht zurück
+     */
 
-	@Override
-	public String encrypt(String key, String message) throws IllegalKeyException, IllegalMessageException {
+    @Override
+    public String encrypt(String key, String message)
+            throws IllegalKeyException, IllegalMessageException {
 
-		char[] messageArray = message.toCharArray();
-		char[] keyArray = key.toCharArray();
-		char[] tempArray = null;
-		int bit;
+        if (!Tool.obGrossbuchstabe(key)) {
+            throw new IllegalKeyException(
+                    "Schlüssel enthält ungültige Buchstaben");
+        }
 
-		tempArray = ueberpruefeLaenge(keyArray, messageArray).toCharArray();
+        String temp = null;
+        int bit;
 
-		String encrypt = "";
+        temp = ueberpruefeLaenge(key, message);
 
-		for (int i = 0; i < key.length(); i++) {
-			bit = (i + 1) ^ getIndex(tempArray[i]);
-			encrypt += ALPHABET[bit];
+        String encrypt = "";
 
-		}
-		return encrypt;
+        for (int i = 0; i < temp.length(); i++) {
+            bit = (i + 1) ^ Tool.getIndex(temp.charAt(i), ALPHABET);
+            encrypt += ALPHABET[bit];
 
-	}
+        }
+        return encrypt;
 
-	/**
-	 * Entschluesselt die uebergebene Nachricht mit dem dazugehoerende
-	 * Schluessel
-	 * 
-	 * @param key
-	 *            Schluessel der für die richtige Entschluesselung notwendig ist
-	 * @param cypherText
-	 *            Verschluesselte Nachricht, die entschluesselt werden soll
-	 * 
-	 * @return gibt die entschluesselte Nachricht zurück
-	 */
+    }
 
-	@Override
-	public String decrypt(String key, String cypherText) throws IllegalKeyException, IllegalMessageException {
-		char[] keyArray = key.toCharArray();
-		char[] cypherArray = cypherText.toCharArray();
-		char[] tempArray = null;
-		int bit;
+    /**
+     * Entschluesselt die uebergebene Nachricht mit dem dazugehoerende
+     * Schluessel
+     * 
+     * @param key
+     *            Schluessel der für die richtige Entschluesselung notwendig ist
+     * @param cypherText
+     *            Verschluesselte Nachricht, die entschluesselt werden soll
+     * 
+     * @return gibt die entschluesselte Nachricht zurück
+     */
 
-		String decrypt = "";
+    @Override
+    public String decrypt(String key, String cypherText)
+            throws IllegalKeyException, IllegalMessageException {
+        if (!Tool.obGrossbuchstabe(key)) {
+            throw new IllegalKeyException(
+                    "Schlüssel enthält ungültige Buchstaben");
+        }
 
-		tempArray = ueberpruefeLaenge(keyArray, cypherArray).toCharArray();
+        String temp = null;
+        int bit;
+        String decrypt = "";
 
-		for (int i = 0; i < cypherText.length(); i++) {
-			bit = (getIndex(tempArray[i])) ^ getIndex(cypherArray[i]);
-			decrypt += ALPHABET[bit];
+        temp = ueberpruefeLaenge(key, cypherText);
 
-		}
-		return decrypt;
+        for (int i = 0; i < cypherText.length(); i++) {
+            bit = (Tool.getIndex(temp.charAt(i), ALPHABET)) ^ Tool.getIndex(cypherText.charAt(i),ALPHABET);
+            decrypt += ALPHABET[bit];
 
-	}
+        }
+        return decrypt;
 
-	/**
-	 * Die Methode ueberpruefeLaenge kontrolliert die ob die Nachricht dieselbe
-	 * Laenge wie der Schluessel hat. Sollte es nicht der Fall sein, so wird es
-	 * solange lange wiederholt, bis die Nachricht die Laenge des Schluessels
-	 * hat.
-	 * 
-	 * @param keyArray
-	 *            Schluessel der angepasst werden soll
-	 * @param messageArray
-	 *            angepasste Nachricht
-	 * @return anpassen gibt Laenge zurück.
-	 */
+    }
 
-	private String ueberpruefeLaenge(char[] keyArray, char[] messageArray) {
+    /**
+     * Die Methode ueberpruefeLaenge kontrolliert die ob die Nachricht dieselbe
+     * Laenge wie der Schluessel hat. Sollte es nicht der Fall sein, so wird es
+     * solange lange wiederholt, bis die Nachricht die Laenge des Schluessels
+     * hat.
+     * 
+     * @param keyArray
+     *            Schluessel der angepasst werden soll
+     * @param messageArray
+     *            angepasste Nachricht
+     * @return anpassen gibt Laenge zurück.
+     */
 
-		String anpassen = String.valueOf(keyArray);
+    private String ueberpruefeLaenge(String key, String message) {
 
-		if (keyArray.length < messageArray.length) {
+        String anpassen = key;
 
-			int rest = messageArray.length - keyArray.length + 1;
+        if (key.length() < message.length()) {
 
-			for (int i = 0; i < rest; i++) {
-				if (i == keyArray.length) {
+            int rest = message.length() - key.length();
 
-					i = 0;
-					rest -= keyArray.length;
-				}
+            for (int i = 0; i < rest; i++) {
+                if (i == key.length()) {
+                    i = 0;
+                    rest -= key.length();
+                }
 
-				anpassen += keyArray[i];
-			}
-		} else {
-			return String.valueOf(keyArray);
-		}
+                anpassen += key.charAt(i);
+            }
+        } else {
+            return key;
+        }
 
-		return anpassen;
+        return anpassen;
 
-	}
-
-	/**
-	 * Die Methode getIndex gibt den gesuchten Buchstaben zurueck
-	 * 
-	 * @param gesuchterChar
-	 * @return i gibt den Buchstabe zurueck.
-	 */
-
-	private int getIndex(char gesuchterChar) {
-		for (int i = 0; i < ALPHABET.length; i++) {
-			if (ALPHABET[i] == gesuchterChar) {
-				return i;
-			}
-
-		}
-		return 0;
-	}
+    }
 
 }
