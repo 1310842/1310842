@@ -2,10 +2,11 @@ package de.hsmannheim.tpe.ws15.gruppe11.simulation;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.Crypter;
-import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalKeyException;
-import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageException;
+
 import de.hsmannheim.tpe.ws15.gruppe11.enumeration.CrypterVerfahren;
+import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalMessageException;
+import de.hsmannheim.tpe.ws15.gruppe11.interfaces.Crypter;
 import de.hsmannheim.tpe.ws15.gruppe11.verschluesselung.CrypterFactory;
 
 /**

@@ -1,7 +1,7 @@
 package de.hsmannheim.tpe.ws15.gruppe11.verschluesselung;
 
-import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.Crypter;
 import de.hsmannheim.tpe.ws15.gruppe11.enumeration.CrypterVerfahren;
+import de.hsmannheim.tpe.ws15.gruppe11.interfaces.Crypter;
 
 /**
  * Die Klasse CrypterFactory stellt durch die Methode <b>createCrypter</b>

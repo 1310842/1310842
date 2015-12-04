@@ -1,4 +1,4 @@
-package de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst;
+package de.hsmannheim.tpe.ws15.gruppe11.exceptions;
 
 /**
  * Die Klasse IllegalKeyExeption stellt eine Ausnahme dar. Wenn der eingegebene

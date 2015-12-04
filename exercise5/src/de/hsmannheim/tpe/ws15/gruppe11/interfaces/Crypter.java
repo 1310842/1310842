@@ -1,4 +1,7 @@
-package de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst;
+package de.hsmannheim.tpe.ws15.gruppe11.interfaces;
+
+import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalMessageException;
 
 /**
  * Grundlegendes Interface, um Verschlüsselung durchzuführen. Mit Hilfe dieses
