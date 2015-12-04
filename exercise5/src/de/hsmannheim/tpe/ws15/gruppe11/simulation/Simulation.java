@@ -1,10 +1,10 @@
 package de.hsmannheim.tpe.ws15.gruppe11.simulation;
 
 import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.Crypter;
-import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.CrypterFactory;
 import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalKeyException;
 import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageException;
 import de.hsmannheim.tpe.ws15.gruppe11.enumeration.CrypterVerfahren;
+import de.hsmannheim.tpe.ws15.gruppe11.verschluesselung.CrypterFactory;
 
 /**
  * Die Klasse Simulation führt die Verschluesselungen durch.
