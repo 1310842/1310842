@@ -14,7 +14,7 @@ import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageExc
 
 public class CrypterNull implements Crypter {
 
-	public CrypterNull() {
+	CrypterNull() {
 		super();
 	}
 
