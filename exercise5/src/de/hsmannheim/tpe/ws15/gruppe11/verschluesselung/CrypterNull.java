@@ -1,11 +1,12 @@
 package de.hsmannheim.tpe.ws15.gruppe11.verschluesselung;
 
-import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalKeyException;
-import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalMessageException;
+import de.hsmannheim.tpe.ws15.gruppe11.exception.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.exception.IllegalMessageException;
 import de.hsmannheim.tpe.ws15.gruppe11.interfaces.Crypter;
 
 /**
- * Die Klasse CrypterNull
+ * Die Klasse CrypterNull verschluesselt den Text nicht. Die Ausgabe entspricht
+ * der Eingabe.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
@@ -19,9 +20,13 @@ public class CrypterNull implements Crypter {
 	}
 
 	/**
-	 * Die Methode encrypt überschreibt den key und message.
+	 * Die Methode encrypt ueberschreibt den key und message
 	 * 
-	 * @return gibt message zurück.
+	 * @param key
+	 *            Schluessel fuer die Verschluesselung
+	 * @param message
+	 *            Verschluesselug der Nachricht
+	 * @return gibt message unverschluesselt zurueck
 	 */
 
 	@Override
@@ -30,9 +35,13 @@ public class CrypterNull implements Crypter {
 	}
 
 	/**
-	 * Die Methode decrypt überschreibt den key und cypherText
+	 * Die Methode decrypt ueberschreibt den key und cypherText
 	 * 
-	 * @return gibt cypherText zurück.
+	 * @param key
+	 *            Schluessel fuer die Verschluesselung
+	 * @param cypherText
+	 *            Entschluesselung der verschluesselte Nachricht
+	 * @return gibt cypherText zurueck
 	 */
 
 	@Override

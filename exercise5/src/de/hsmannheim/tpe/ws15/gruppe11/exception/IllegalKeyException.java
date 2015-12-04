@@ -1,8 +1,9 @@
-package de.hsmannheim.tpe.ws15.gruppe11.exceptions;
+package de.hsmannheim.tpe.ws15.gruppe11.exception;
 
 /**
- * Die Klasse IllegalKeyExeption stellt eine Ausnahme dar. Wenn der eingegebene
- * Schluessel ungültig ist, dann tretet diese in Kraft.
+ * Die Klasse IllegalKeyExeption ist fuer den Schluessel Exception, die von der
+ * Basisklasse Exception vererbt wird. Diese tritt erst dann ein, wenn der
+ * eingegebene Schluessel ungueltig ist.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra

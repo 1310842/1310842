@@ -1,7 +1,7 @@
 package de.hsmannheim.tpe.ws15.gruppe11.enumeration;
 
 /**
- * Enum fuer die Auswahl der Verschluesselungen.
+ * Enum ist fuer die Auswahl der Verschluesselungen.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra

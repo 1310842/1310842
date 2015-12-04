@@ -1,7 +1,7 @@
 package de.hsmannheim.tpe.ws15.gruppe11.verschluesselung;
 
-import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalKeyException;
-import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalMessageException;
+import de.hsmannheim.tpe.ws15.gruppe11.exception.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.exception.IllegalMessageException;
 import de.hsmannheim.tpe.ws15.gruppe11.interfaces.Crypter;
 
 /**
@@ -26,8 +26,8 @@ public class CrypterSubstitution implements Crypter {
      * @param key
      *            Schluessel für die Verschluesselung
      * @param message
-     *            Nachricht die verschluesselt werden soll
-     * @return gibt die verschluesselte Nachricht zurück
+     *            Verschluesselung der Nachricht
+     * @return gibt die verschluesselte Nachricht zurueck
      */
 
     @Override
@@ -35,17 +35,17 @@ public class CrypterSubstitution implements Crypter {
             throws IllegalKeyException, IllegalMessageException {
 
         if (key.length() != Tool.getLaenge()) {
-            throw new IllegalKeyException("Schlüssellänge ungültig");
+            throw new IllegalKeyException("Schluessellaenge ungueltig");
         }
 
         if (!Tool.obGrossbuchstabe(key)) {
             throw new IllegalKeyException(
-                    "Schlüssel enthält ungültige Buchstaben");
+                    "Schluessel enthaelt ungueltige Buchstaben");
         }
 
         if (!Tool.differentLetter(key)) {
             throw new IllegalKeyException(
-                    "Schlüssel hat min. zwei mal die gleiche Buchstabe");
+                    "Schluessel hat min. zwei mal die gleiche Buchstabe");
         }
         message = message.toUpperCase();
 
@@ -76,17 +76,17 @@ public class CrypterSubstitution implements Crypter {
             throws IllegalKeyException, IllegalMessageException {
 
         if (key.length() != Tool.getLaenge()) {
-            throw new IllegalKeyException("Schlüssellänge ungültig");
+            throw new IllegalKeyException("Schluessellaenge ungueltig");
         }
 
         if (!Tool.obGrossbuchstabe(key)) {
             throw new IllegalKeyException(
-                    "Schlüssel enthält ungültige Buchstaben");
+                    "Schluessel enthaelt ungültige Buchstaben");
         }
 
         if (!Tool.differentLetter(key)) {
             throw new IllegalKeyException(
-                    "Schlüssel hat min. zwei mal die gleiche Buchstabe");
+                    "Schluessel hat min. zwei mal die gleiche Buchstabe");
         }
 
         cypherText = cypherText.toUpperCase();

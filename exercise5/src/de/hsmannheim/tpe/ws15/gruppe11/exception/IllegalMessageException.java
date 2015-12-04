@@ -1,8 +1,9 @@
-package de.hsmannheim.tpe.ws15.gruppe11.exceptions;
+package de.hsmannheim.tpe.ws15.gruppe11.exception;
 
 /**
- * Die Klasse IllegalMessageException stellt eine Ausnahme dar.
- * Diese treten in Kraft, wenn die eingegebene Nachricht ungültig ist.
+ * Die Klasse IllegalMessageExeption ist fuer die Nachricht Exception, die von
+ * der Basisklasse Exeption vererbt wird. Diese tritt erst dann ein, wenn der
+ * eingegebene Schluessel ungueltig ist.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra

@@ -1,13 +1,13 @@
 package de.hsmannheim.tpe.ws15.gruppe11.simulation;
 
 import de.hsmannheim.tpe.ws15.gruppe11.enumeration.CrypterVerfahren;
-import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalKeyException;
-import de.hsmannheim.tpe.ws15.gruppe11.exceptions.IllegalMessageException;
+import de.hsmannheim.tpe.ws15.gruppe11.exception.IllegalKeyException;
+import de.hsmannheim.tpe.ws15.gruppe11.exception.IllegalMessageException;
 import de.hsmannheim.tpe.ws15.gruppe11.interfaces.Crypter;
 import de.hsmannheim.tpe.ws15.gruppe11.verschluesselung.CrypterFactory;
 
 /**
- * Die Klasse Simulation führt die Verschluesselungen durch.
+ * Die Klasse Simulation fuehrt die Verschluesselungen durch.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
