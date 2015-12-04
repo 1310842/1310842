@@ -13,118 +13,91 @@ import de.hsmannheim.tpe.ws15.gruppe11.bundesnachrichtendienst.IllegalMessageExc
 
 public class CrypterCaesar implements Crypter {
 
-	private final static int MIN = 65;
-	private final static int MAX = 90;
-	private final static int LAENGE = 26;
+    CrypterCaesar() {
+        super();
+    }
 
-	public CrypterCaesar() {
-		super();
-	}
+    public static int getIndex(String buchstabe) {
+        return (buchstabe.charAt(0) - '@');
+    }
 
-	public static int getIndex(String buchstabe) {
-		return (buchstabe.charAt(0) - '@');
-	}
+    /**
+     * Verschluesselt eine Nachricht mit dem Parameter.
+     * 
+     * @param key
+     *            Schluessel der für die Verschluesselung verwendet werden soll
+     * @param message
+     *            Nachricht die Verschluesselt werden soll
+     * @return verschluesselte Nachricht in Datentyp String
+     */
 
-	/**
-	 * Verschluesselt eine Nachricht mit dem Parameter.
-	 * 
-	 * @param key
-	 *            Schluessel der für die Verschluesselung verwendet werden soll
-	 * @param message
-	 *            Nachricht die Verschluesselt werden soll
-	 * @return verschluesselte Nachricht in Datentyp String
-	 */
+    @Override
+    public String encrypt(String key, String message)
+            throws IllegalKeyException, IllegalMessageException {
 
-	@Override
-	public String encrypt(String key, String message) throws IllegalKeyException, IllegalMessageException {
-		char[] messageArray = message.toCharArray();
+        if (key.length() != 1) {
+            throw new IllegalKeyException("Schlüssellänge ungültig");
+        }
 
-		pruefeLaenge(key);
-		obGrossbuchstabe(key);
+        if (!Tool.obGrossbuchstabe(key)) {
+            throw new IllegalKeyException(
+                    "Schluessel enthält ungültige Buchstabe");
+        }
 
-		int index = getIndex(key);
-		int i2;
+        char[] messageArray = message.toUpperCase().toCharArray();
 
-		for (int i = 0; i < messageArray.length; i++) {
-			i2 = messageArray[i] + index;
+        int index = getIndex(key);
+        int index2;
 
-			if (i2 > MAX) {
-				i2 -= LAENGE;
-			}
-			messageArray[i] = (char) i2;
-		}
-		return String.valueOf(messageArray);
-	}
+        for (int i = 0; i < messageArray.length; i++) {
+            index2 = messageArray[i] + index;
 
-	/**
-	 * Entschlüsselt einen als Parameter übergebenen Nachricht mit dem
-	 * dazugehörenden Schlüssel
-	 * 
-	 * @param key
-	 *            Schluessel der für die Entschluesselung verwendet werden soll
-	 * @param cypherText
-	 *            Nachricht der entschluesselt werden soll
-	 * 
-	 * @return gibt die entschluesselte Nachricht als Datentyp String zurück.
-	 */
+            if (index2 > Tool.getMax()) {
+                index2 -= Tool.getLaenge();
+            }
+            messageArray[i] = (char) index2;
+        }
+        return String.valueOf(messageArray);
+    }
 
-	@Override
-	public String decrypt(String key, String cypherText) throws IllegalKeyException, IllegalMessageException {
-		char[] messageArray = cypherText.toCharArray();
+    /**
+     * Entschlüsselt einen als Parameter übergebenen Nachricht mit dem
+     * dazugehörenden Schlüssel
+     * 
+     * @param key
+     *            Schluessel der für die Entschluesselung verwendet werden soll
+     * @param cypherText
+     *            Nachricht der entschluesselt werden soll
+     * 
+     * @return gibt die entschluesselte Nachricht als Datentyp String zurück.
+     */
 
-		pruefeLaenge(key);
-		obGrossbuchstabe(key);
+    @Override
+    public String decrypt(String key, String cypherText)
+            throws IllegalKeyException, IllegalMessageException {
+        char[] messageArray = cypherText.toCharArray();
 
-		int index = getIndex(key);
-		int i2;
+        if (key.length() != 1) {
+            throw new IllegalKeyException("Schlüssellänge ungültig");
+        }
 
-		for (int i = 0; i < messageArray.length; i++) {
-			i2 = messageArray[i] - index;
+        if (!Tool.obGrossbuchstabe(key)) {
+            throw new IllegalKeyException(
+                    "Schluessel enthält ungültige Buchstabe");
+        }
 
-			if (i2 < MIN) {
-				i2 += LAENGE;
-			}
-			messageArray[i] = (char) i2;
-		}
-		return String.valueOf(messageArray);
-	}
+        int index = getIndex(key);
+        int i2;
 
-	/**
-	 * Die Methode pruefeLaenge prueft die Laenge des Schluessels.
-	 * 
-	 * @param key
-	 *            übergibt den Schluessel.
-	 * @return gibt true zurueck.
-	 * @throws IllegalKeyException
-	 *             wirft die Ausnahme.
-	 */
+        for (int i = 0; i < messageArray.length; i++) {
+            i2 = messageArray[i] - index;
 
-	private boolean pruefeLaenge(String key) throws IllegalKeyException {
-		if (key.length() != 1) {
-			throw new IllegalKeyException("Schlüssel ungültig");
-		} else {
-			return true;
-		}
+            if (i2 < Tool.getMin()) {
+                i2 += Tool.getLaenge();
+            }
+            messageArray[i] = (char) i2;
+        }
+        return String.valueOf(messageArray);
+    }
 
-	}
-
-	/**
-	 * Die Methode obGrossbuchstabe ueberprueft, ob der Schluessel
-	 * großgeschrieben ist.
-	 * 
-	 * @param key
-	 *            uebergibt den Schluessel.
-	 * @throws IllegalKeyException
-	 *             wirft die Ausnahme.
-	 */
-
-	private void obGrossbuchstabe(String key) throws IllegalKeyException {
-		int nummer = key.charAt(0);
-		if (nummer >= MIN && nummer <= MAX) {
-			return;
-
-		} else {
-			throw new IllegalKeyException("Geht net");
-		}
-	}
 }
