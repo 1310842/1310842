@@ -9,6 +9,6 @@ package de.hsmannheim.tpe.ws15.gruppe11.enumeration;
 
 public enum CrypterVerfahren {
 
-	CAESAR, NULL, SUBSTITUTION, XOR
+	CAESAR, NULL, SUBSTITUTION, XOR, REVERSE
 
 }

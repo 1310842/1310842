@@ -31,6 +31,8 @@ public class CrypterFactory {
 			return new CrypterSubstitution();
 		case XOR:
 			return new CrypterXOR();
+		case REVERSE:
+			return new ReversCrypter();
 		default:
 			throw new IllegalArgumentException("Existiert  nicht.");
 		}

@@ -1,6 +1,7 @@
 package de.hsmannheim.tpe.ws15.gruppe11.simulation;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import de.hsmannheim.tpe.ws15.gruppe11.enumeration.CrypterVerfahren;
@@ -16,7 +17,6 @@ import de.hsmannheim.tpe.ws15.gruppe11.verschluesselung.CrypterFactory;
  * @author Celik, Kuebra
  *
  */
-
 
 public class JUnit {
 	@Test
@@ -160,5 +160,11 @@ public class JUnit {
 			assertTrue(true);
 		}
 
+	}
+
+	@Test
+	public void testReverse() throws IllegalKeyException, IllegalMessageException {
+		Crypter reverse = CrypterFactory.createCrypter(CrypterVerfahren.REVERSE);
+		assertEquals("CBA", reverse.encrypt("", "ABC"));
 	}
 }
