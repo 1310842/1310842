@@ -11,7 +11,6 @@ import de.hsmannheim.tpe.ws15.gruppe11.interfaces.List;
  * @author Car, Isra
  * @author Celik, Kübra
  * 
- * @param <T>
  * 
  */
 
