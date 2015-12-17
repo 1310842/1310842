@@ -1,5 +1,7 @@
 package de.hsmannheim.tpe.ws15.gruppe11.dergraf;
 
+import de.hsmannheim.tpe.ws15.gruppe11.impl.NodeListImpl;
+
 /**
  * 
  * @author Car, Isra
@@ -20,10 +22,10 @@ public class Node<T> {
 	 * @param wert
 	 * @param children
 	 */
-	public Node(String name, T wert, NodeListImpl<T> children) {
+	public Node(String name, T wert) {
 		this.name = name;
 		this.wert = wert;
-		this.children = new NodeListImpl<>();
+		
 	}
 
 	/**
@@ -31,8 +33,8 @@ public class Node<T> {
 	 * 
 	 * @param children
 	 */
-	void addChild(Node<T> children) {
-		this.addChild(children);
+	public void addChild(Node<T> children) {
+		this.children.add(children);
 	}
 
 	/**
@@ -45,20 +47,11 @@ public class Node<T> {
 	}
 
 	/**
-	 * setter Methode für Name
-	 * 
-	 * @param name
-	 */
-	void setName(String name) {
-		this.name = name;
-	}
-
-	/**
 	 * Gibt die Kindsknoten der Liste Knoten zurück
 	 * 
 	 * @return Kindsknoten
 	 */
-	NodeListImpl<T> getChildren() {
+	public NodeListImpl<T> getChildren() {
 		return this.children;
 	}
 
@@ -67,18 +60,13 @@ public class Node<T> {
 	 * 
 	 * @return Wert des Knotens
 	 */
-	private T getWert() {
+	public T getWert() {
 		return wert;
 	}
-
-	/**
-	 * setter-Methode für den Wert des Knotens
-	 * 
-	 * @param wert
-	 *            des Knotens
-	 */
-	void setWert(T wert) {
-		this.wert = wert;
+	
+	@Override
+	public String toString(){
+		return this.name;
 	}
 
 }
