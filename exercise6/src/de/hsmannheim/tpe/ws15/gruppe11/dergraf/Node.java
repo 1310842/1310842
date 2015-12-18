@@ -3,11 +3,10 @@ package de.hsmannheim.tpe.ws15.gruppe11.dergraf;
 import de.hsmannheim.tpe.ws15.gruppe11.impl.NodeListImpl;
 
 /**
+ * Die Klasse Node instanziiert die Knoten.
  * 
  * @author Car, Isra
  * @author Celik, Kuebra
- *
- * @param <T>
  */
 public class Node<T> {
 
@@ -16,56 +15,63 @@ public class Node<T> {
 	private NodeListImpl<T> children = new NodeListImpl<>();
 
 	/**
-	 * Konstruktor der Klasse
+	 * Konstruktor der Klasse Node.
 	 * 
 	 * @param name
+	 *            die Bezeichnung der einzelnen Knoten
 	 * @param wert
-	 * @param children
+	 *            der Wert der einzelnen Knoten
 	 */
 	public Node(String name, T wert) {
 		this.name = name;
 		this.wert = wert;
-		
 	}
 
 	/**
-	 * Fügt einen Kindsknoten in die Liste
+	 * Methode addChild der Klasse Node.
 	 * 
 	 * @param children
+	 *            fügt einen Koten als Kindknoten in die Liste hinzu
 	 */
 	public void addChild(Node<T> children) {
 		this.children.add(children);
 	}
 
 	/**
-	 * Gibt den Namen zurück
+	 * Methode getName der Klasse Node.
 	 * 
-	 * @return name
+	 * @return name gibt den Namen eines Konten zurück
 	 */
 	String getName() {
 		return name;
 	}
 
 	/**
-	 * Gibt die Kindsknoten der Liste Knoten zurück
+	 * Methode getChildren gibt Kindsnoten zurück.
 	 * 
-	 * @return Kindsknoten
+	 * @return Kindsknoten gibt die Kindsknoten der Liste Knoten zurück
 	 */
 	public NodeListImpl<T> getChildren() {
 		return this.children;
 	}
 
 	/**
-	 * Gibt den Wert des Knotens zurück
+	 * Gibt den Wert des Knotens zurück.
 	 * 
 	 * @return Wert des Knotens
 	 */
 	public T getWert() {
 		return wert;
 	}
-	
+
+	/**
+	 * Umfassende Information über den Knoten, Ausgabe Kinder falls vorhanden.
+	 * 
+	 * @return gibt umfassende Information über den Knoten
+	 */
+
 	@Override
-	public String toString(){
+	public String toString() {
 		return this.name;
 	}
 

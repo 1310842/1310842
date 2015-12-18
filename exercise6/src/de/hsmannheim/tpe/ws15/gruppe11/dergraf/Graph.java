@@ -4,12 +4,10 @@ import de.hsmannheim.tpe.ws15.gruppe11.interfaces.NodeList;
 import de.hsmannheim.tpe.ws15.gruppe11.interfaces.SearchStrategy;
 
 /**
- * 
+ * Die Klasse Graph instanziiert die Graphen.
  * 
  * @author Car, Isra
  * @author Celik, Kübra
- * 
- * @param <T>
  */
 
 public class Graph<T> {
@@ -17,34 +15,42 @@ public class Graph<T> {
 	private Node<T> rootNode;
 
 	/**
-	 * Konstruktor
+	 * Instanziierung von Graph mit mindestens einem Knoten.
 	 * 
-	 * @param root
+	 * @param Wurzelknoten
+	 *            die bereits bei der Instanziierung bekannt ist
 	 */
 	public Graph(Node<T> root) {
 		this.rootNode = root;
 	}
 
 	/**
-	 * getter Methode
+	 * Anfangsknoten wird zurückgegeben.
 	 */
 	public Node<T> getRoot() {
 		return rootNode;
 	}
 
 	/**
+	 * Suchmethode (Tiefensuche/ Breitensuche) für den Graph.
 	 * 
-	 * @return
+	 * @param suchverfahren
+	 *            hier startet die Suche
+	 * @param value
+	 *            Wert der gesucht werden soll
+	 * @return der gefundene Knoten in Datentyp NodeList
 	 */
-	
-	public NodeList<T> search(T value, SearchStrategy<T> suchverfahren) {
-        return suchverfahren.search(this.rootNode, value);
-    }
 
+	public NodeList<T> search(T value, SearchStrategy<T> suchverfahren) {
+		return suchverfahren.search(this.rootNode, value);
+	}
 
 	/**
+	 * Die Methode kopiert alle Knoten in die übergebene Liste.
 	 * 
-	 * @return
+	 * @param list
+	 *            hier werden die Werte in die Liste kopiert
+	 * @return die Liste mit den kopierten Werten
 	 */
 	public NodeList<T> copyInto(NodeList<T> list) {
 		list.addFirst(this.rootNode);
@@ -53,9 +59,13 @@ public class Graph<T> {
 	}
 
 	/**
+	 * Die Methode copyInto ist die rekursive Kopiermethode.
 	 * 
 	 * @param root
+	 *            hier fängt der Startknoten an von dem aus der Kopiervorgang
+	 *            beginnen soll
 	 * @param list
+	 *            die Liste in dem die Knoten kopiert werden soll
 	 */
 	private void copyIntoRecursive(Node<T> root, NodeList<T> list) {
 		for (Node<T> child : root.getChildren()) {
